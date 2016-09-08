@@ -2,6 +2,7 @@ package edu.jsu.mcis;
 
 import org.junit.*;
 import static org.junit.Assert.*;
+import java.util.Scanner;
 
 public class TicTacToeTest {
 	
@@ -16,10 +17,6 @@ public class TicTacToeTest {
 	@Test
 	public void testInitialBoardIsEmpty() {
 		assertTrue(ttt.setNewBoard());
-	}
-	@Test
-	public void testThatBoardIsDisplayed(){
-		assertTrue(ttt.displayBoard());
 	}
 	
 	@Test

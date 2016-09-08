@@ -1,27 +1,16 @@
 package edu.jsu.mcis;
-public class TicTacToeMain{
+
+import javax.swing.*;
+import java.awt.event.*;
+import java.awt.*;
+import javafx.application.Application; 
+
+abstract public class TicTacToeMain extends Application{
 	public static void main(String[] args) {
-		TicTacToe t = new TicTacToe();
-		int turns = 0;
-		t.setNewBoard();
-		t.ongoingGame();
-		
-		while (t.ongoingGame == true && turns != 9){
-			t.setPlayer();
-			t.askPlayer(t.player);
-			t.displayBoard();
-			turns++;
-			t.checkForVerticalWin();
-			t.checkForHorizontalWin();
-			t.checkForDiagonalWin();
-			if (turns == 9 && t.ongoingGame == true){
-				t.checkForTie();
-				t.displayBoard();
-			}
-			if (t.ongoingGame == false){
-				t.displayBoard();
-				t.getWinner();
-			}
-		}
+		JFrame win = new JFrame("Tic Tac Toe");
+		win.add(new TicTacToeVC());
+		win.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		win.pack();
+		win.setVisible(true);
 	}
 }

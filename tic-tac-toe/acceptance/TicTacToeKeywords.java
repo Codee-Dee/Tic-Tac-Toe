@@ -19,6 +19,10 @@ public class TicTacToeKeywords {
 	}
     
 	public String getWinner() {
+		t.checkForTie();
+		t.checkForVerticalWin();
+		t.checkForHorizontalWin();
+		t.checkForDiagonalWin();
 		return t.getWinner();
 	}
 }

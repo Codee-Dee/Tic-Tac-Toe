@@ -6,9 +6,9 @@ import java.util.Scanner;
 <span class="fc" id="L6">public class TicTacToe {</span>
 	
 <span class="fc" id="L8">	private char [][] board = new char [3][3];</span>
-<span class="fc" id="L9">	public char player = 'O';</span>
+<span class="fc" id="L9">	private char player = 'O';</span>
 <span class="fc" id="L10">	private String winner = &quot; &quot;;</span>
-<span class="fc" id="L11">	public boolean ongoingGame = false;</span>
+<span class="fc" id="L11">	private boolean ongoingGame = false;</span>
 	
 	public  boolean setNewBoard(){
 <span class="fc" id="L14">        boolean newBoard = false;</span>
@@ -24,128 +24,86 @@ import java.util.Scanner;
         }
 <span class="fc" id="L25">        return newBoard;</span>
     }
-	public boolean displayBoard(){
-<span class="fc" id="L28">		boolean boardDisplayed = false;</span>
-<span class="fc bfc" id="L29" title="All 2 branches covered.">		for (int row =0; row &lt; board.length; row++){</span>
-<span class="pc bpc" id="L30" title="1 of 2 branches missed.">			for (int column = 0; column&lt; board[0].length; column++){</span>
-<span class="fc" id="L31">				System.out.print(&quot;\t&quot; + board[row][column]);</span>
-<span class="fc bfc" id="L32" title="All 2 branches covered.">				if (column == 0){</span>
-<span class="fc" id="L33">					System.out.print(&quot;|&quot;);</span>
-				}
-				
-<span class="fc bfc" id="L36" title="All 2 branches covered.">				else if (column == 1){</span>
-<span class="fc" id="L37">					System.out.print(&quot;\t&quot; + &quot;|&quot;);</span>
-				}
-				
-				else {
-<span class="fc" id="L41">					boardDisplayed = true;</span>
-<span class="fc" id="L42">					break;</span>
-				}
-			}
-<span class="fc bfc" id="L45" title="All 4 branches covered.">			if (row == 0 || row == 1){</span>
-<span class="fc" id="L46">				System.out.print(&quot;\n------------------------------------------\n&quot;);</span>
-<span class="fc" id="L47">				boardDisplayed = true;</span>
-			}
-		}
-<span class="fc" id="L50">		System.out.println();</span>
-<span class="fc" id="L51">		return boardDisplayed;</span>
-	}
-	public void askPlayer(char player){
-<span class="nc" id="L54">		Scanner keyboard = new Scanner(System.in);</span>
-		int row, column;
-		do{
-<span class="nc" id="L57">			System.out.printf(&quot;Player %s Please enter a row (0-2): &quot;, player);</span>
-<span class="nc" id="L58">			row = keyboard.nextInt();</span>
-			
-<span class="nc" id="L60">			System.out.printf(&quot;Please %s enter a column (0-2): &quot;, player);</span>
-<span class="nc" id="L61">			column = keyboard.nextInt();</span>
-		}
-<span class="nc bnc" id="L63" title="All 2 branches missed.">		while(checkForValidMove(row,column));</span>
-<span class="nc" id="L64">			System.out.println(&quot;\n&quot;);</span>
-<span class="nc" id="L65">			setMove(row,column);</span>
-<span class="nc" id="L66">	}</span>
-	
-		
 	public char setPlayer(){
-<span class="fc bfc" id="L70" title="All 2 branches covered.">		if (player == 'O'){</span>
-<span class="fc" id="L71">			player = 'X';</span>
+<span class="fc bfc" id="L28" title="All 2 branches covered.">		if (player == 'O'){</span>
+<span class="fc" id="L29">			player = 'X';</span>
 		}
 		else 
-<span class="fc" id="L74">			player = 'O';</span>
-<span class="fc" id="L75">		return player;</span>
+<span class="fc" id="L32">			player = 'O';</span>
+<span class="fc" id="L33">		return player;</span>
 	}
 	public boolean ongoingGame(){
-<span class="fc" id="L78">		ongoingGame = true;</span>
-<span class="fc" id="L79">		return ongoingGame;</span>
+<span class="fc" id="L36">		ongoingGame = true;</span>
+<span class="fc" id="L37">		return ongoingGame;</span>
 	}
 	
 	public void setMove(int row, int column){
-<span class="pc bpc" id="L83" title="4 of 8 branches missed.">		if (row &gt;= 0 &amp;&amp; row &lt;= 2 &amp;&amp; column &gt;= 0 &amp;&amp; column &lt;= 2){</span>
-<span class="fc bfc" id="L84" title="All 2 branches covered.">			if (board[row][column] == ' '){</span>
-<span class="fc" id="L85">				board[row][column] = player;</span>
+<span class="pc bpc" id="L41" title="4 of 8 branches missed.">		if (row &gt;= 0 &amp;&amp; row &lt;= 2 &amp;&amp; column &gt;= 0 &amp;&amp; column &lt;= 2){</span>
+<span class="fc bfc" id="L42" title="All 2 branches covered.">			if (board[row][column] == ' '){</span>
+<span class="fc" id="L43">				board[row][column] = player;</span>
 			}
 		}
-<span class="fc" id="L88">	}</span>
+<span class="fc" id="L46">	}</span>
 	
 	public String getMove(int row, int column){
-<span class="fc" id="L91">		String move = Character.toString(board[row][column]);</span>
-<span class="fc" id="L92">        return move;</span>
+<span class="fc" id="L49">		String move = Character.toString(board[row][column]);</span>
+<span class="fc" id="L50">        return move;</span>
 	}
 	
 	public boolean checkForValidMove(int row, int column){
-<span class="fc" id="L96">		boolean valid = false;</span>
+<span class="fc" id="L54">		boolean valid = false;</span>
 
-<span class="pc bpc" id="L98" title="6 of 10 branches missed.">		if (row &lt; 0 || row &gt; 2 &amp;&amp; column &lt; 0 || column &gt; 2 || board[row][column] !=' '){</span>
-<span class="fc" id="L99">			valid = true;</span>
-<span class="fc" id="L100">			return valid;</span>
+<span class="pc bpc" id="L56" title="6 of 10 branches missed.">		if (row &lt; 0 || row &gt; 2 &amp;&amp; column &lt; 0 || column &gt; 2 || board[row][column] !=' '){</span>
+<span class="fc" id="L57">			valid = true;</span>
+<span class="fc" id="L58">			return valid;</span>
 		}
-<span class="nc" id="L102">		return valid;</span>
+<span class="nc" id="L60">		return valid;</span>
 	}
 	
 	public void checkForHorizontalWin(){
-<span class="fc bfc" id="L106" title="All 2 branches covered.">		for (int i = 0; i &lt; board.length; i++){</span>
-<span class="pc bpc" id="L107" title="2 of 6 branches missed.">			if (board[i][0] == board[i][1] &amp;&amp; board[i][1] == board[i][2] &amp;&amp; board[i][0] != ' '){</span>
-<span class="fc" id="L108">				winner = Character.toString(player);</span>
-<span class="fc" id="L109">				ongoingGame = false;</span>
+<span class="fc bfc" id="L64" title="All 2 branches covered.">		for (int i = 0; i &lt; board.length; i++){</span>
+<span class="pc bpc" id="L65" title="2 of 6 branches missed.">			if (board[i][0] == board[i][1] &amp;&amp; board[i][1] == board[i][2] &amp;&amp; board[i][0] != ' '){</span>
+<span class="fc" id="L66">				winner = Character.toString(player);</span>
+<span class="fc" id="L67">				ongoingGame = false;</span>
 			}
 		}
-<span class="fc" id="L112">	}</span>
+<span class="fc" id="L70">	}</span>
 	
 	public void checkForVerticalWin(){
-<span class="fc bfc" id="L115" title="All 2 branches covered.">		for (int i = 0; i &lt; board.length; i++){</span>
-<span class="pc bpc" id="L116" title="2 of 6 branches missed.">			if (board[0][i] == board[1][i] &amp;&amp; board[1][i] == board[2][i] &amp;&amp; board[2][i] != ' '){</span>
-<span class="fc" id="L117">				winner = Character.toString(player);</span>
-<span class="fc" id="L118">				ongoingGame = false;</span>
+<span class="fc bfc" id="L73" title="All 2 branches covered.">		for (int i = 0; i &lt; board.length; i++){</span>
+<span class="pc bpc" id="L74" title="2 of 6 branches missed.">			if (board[0][i] == board[1][i] &amp;&amp; board[1][i] == board[2][i] &amp;&amp; board[2][i] != ' '){</span>
+<span class="fc" id="L75">				winner = Character.toString(player);</span>
+<span class="fc" id="L76">				ongoingGame = false;</span>
 			}
 		}
-<span class="fc" id="L121">	}</span>
+<span class="fc" id="L79">	}</span>
 	
 	public  void checkForDiagonalWin(){
-<span class="pc bpc" id="L124" title="2 of 6 branches missed.">		if (board[0][0] == board[1][1] &amp;&amp; board[1][1] == board[2][2] &amp;&amp; board[0][0]!= ' '){</span>
-<span class="fc" id="L125">			winner = Character.toString(player);</span>
-<span class="fc" id="L126">			ongoingGame = false;</span>
+<span class="pc bpc" id="L82" title="2 of 6 branches missed.">		if (board[0][0] == board[1][1] &amp;&amp; board[1][1] == board[2][2] &amp;&amp; board[0][0]!= ' '){</span>
+<span class="fc" id="L83">			winner = Character.toString(player);</span>
+<span class="fc" id="L84">			ongoingGame = false;</span>
 		}
-<span class="pc bpc" id="L128" title="2 of 6 branches missed.">		if (board[0][2] == board[1][1] &amp;&amp; board[1][1] == board[2][0] &amp;&amp; board[0][2] != ' '){</span>
-<span class="fc" id="L129">			winner = Character.toString(player);</span>
-<span class="fc" id="L130">			ongoingGame = false;</span>
+<span class="pc bpc" id="L86" title="2 of 6 branches missed.">		if (board[0][2] == board[1][1] &amp;&amp; board[1][1] == board[2][0] &amp;&amp; board[0][2] != ' '){</span>
+<span class="fc" id="L87">			winner = Character.toString(player);</span>
+<span class="fc" id="L88">			ongoingGame = false;</span>
 		}
-<span class="fc" id="L132">	}</span>
+<span class="fc" id="L90">	}</span>
 	
 	public void checkForTie(){
-<span class="fc" id="L135">		int count = 0;</span>
-<span class="fc bfc" id="L136" title="All 2 branches covered.">		for (int row = 0; row &lt; board.length;row++){</span>
-<span class="pc bpc" id="L137" title="3 of 6 branches missed.">			if (board[row][0]!= ' ' &amp;&amp; board[row][1] != ' ' &amp;&amp; board[row][2] != ' '){</span>
-<span class="fc" id="L138">				count++;</span>
-<span class="fc bfc" id="L139" title="All 2 branches covered.">				if (count == 3){</span>
-<span class="fc" id="L140">				winner = &quot;TIE&quot;;</span>
-<span class="fc" id="L141">				ongoingGame = false;</span>
+<span class="fc" id="L93">		int count = 0;</span>
+<span class="fc bfc" id="L94" title="All 2 branches covered.">		for (int row = 0; row &lt; board.length;row++){</span>
+<span class="pc bpc" id="L95" title="3 of 6 branches missed.">			if (board[row][0]!= ' ' &amp;&amp; board[row][1] != ' ' &amp;&amp; board[row][2] != ' '){</span>
+<span class="fc" id="L96">				count++;</span>
+<span class="fc bfc" id="L97" title="All 2 branches covered.">				if (count == 3){</span>
+<span class="fc" id="L98">				winner = &quot;TIE&quot;;</span>
+<span class="fc" id="L99">				ongoingGame = false;</span>
 				}
 			}
 		}
-<span class="fc" id="L145">	}</span>
+<span class="fc" id="L103">	}</span>
 	
 	public String getWinner(){
-<span class="fc" id="L148">		return winner;</span>
+<span class="fc" id="L106">		return winner;</span>
 	}
 	
 }
