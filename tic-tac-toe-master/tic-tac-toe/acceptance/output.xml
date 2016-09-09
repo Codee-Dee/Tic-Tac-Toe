@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 2.9 (Jython 2.7.0 on java1.7.0_25)" generated="20160908 20:08:56.111">
+<suite source="C:\Users\cody\Desktop\tic-tac-toe-master\tic-tac-toe\acceptance\TicTacToeGUITest.txt" id="s1" name="TicTacToeGUITest">
+<test id="s1-t1" name="Win Diagonally as X">
+<kw name="Start New Game">
+<kw name="Start Application">
+<arguments>
+<arg>edu.jsu.mcis.TicTacToeVC</arg>
+</arguments>
+<msg timestamp="20160908 20:08:56.502" level="FAIL">No keyword with name 'Start Application' found.</msg>
+<status status="FAIL" starttime="20160908 20:08:56.502" endtime="20160908 20:08:56.502"></status>
+</kw>
+<status status="FAIL" starttime="20160908 20:08:56.486" endtime="20160908 20:08:56.502"></status>
+</kw>
+<status status="FAIL" starttime="20160908 20:08:56.471" endtime="20160908 20:08:56.518" critical="yes">No keyword with name 'Start Application' found.</status>
+</test>
+<test id="s1-t2" name="Win Horizontally as O">
+<kw name="Start New Game">
+<kw name="Start Application">
+<arguments>
+<arg>edu.jsu.mcis.TicTacToeVC</arg>
+</arguments>
+<msg timestamp="20160908 20:08:56.533" level="FAIL">No keyword with name 'Start Application' found.</msg>
+<status status="FAIL" starttime="20160908 20:08:56.533" endtime="20160908 20:08:56.533"></status>
+</kw>
+<status status="FAIL" starttime="20160908 20:08:56.518" endtime="20160908 20:08:56.533"></status>
+</kw>
+<status status="FAIL" starttime="20160908 20:08:56.518" endtime="20160908 20:08:56.533" critical="yes">No keyword with name 'Start Application' found.</status>
+</test>
+<test id="s1-t3" name="Force a Tie">
+<kw name="Start New Game">
+<kw name="Start Application">
+<arguments>
+<arg>edu.jsu.mcis.TicTacToeVC</arg>
+</arguments>
+<msg timestamp="20160908 20:08:56.565" level="FAIL">No keyword with name 'Start Application' found.</msg>
+<status status="FAIL" starttime="20160908 20:08:56.565" endtime="20160908 20:08:56.565"></status>
+</kw>
+<status status="FAIL" starttime="20160908 20:08:56.549" endtime="20160908 20:08:56.565"></status>
+</kw>
+<status status="FAIL" starttime="20160908 20:08:56.549" endtime="20160908 20:08:56.565" critical="yes">No keyword with name 'Start Application' found.</status>
+</test>
+<status status="FAIL" starttime="20160908 20:08:56.127" endtime="20160908 20:08:56.580"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="3">Critical Tests</stat>
+<stat pass="0" fail="3">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" id="s1" fail="3" name="TicTacToeGUITest">TicTacToeGUITest</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20160908 20:08:56.471" level="ERROR">Error in file 'C:\Users\cody\Desktop\tic-tac-toe-master\tic-tac-toe\acceptance\TicTacToeGUITest.txt': Importing test library 'SwingLibrary' failed: ImportError: No module named SwingLibrary
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\RobotFramework\Lib
+  C:\RobotFramework\robotframework-2.9.jar\Lib
+  __classpath__
+  __pyclasspath__/
+CLASSPATH:
+  .
+  ..\build\classes\main
+  C:\RobotFramework\robotframework-2.9.jar</msg>
+</errors>
+</robot>
