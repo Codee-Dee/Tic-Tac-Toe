@@ -16,18 +16,22 @@ public class TicTacToeTest {
 	
 	@Test
 	public void testInitialBoardIsEmpty() {
-		assertTrue(ttt.setNewBoard());
+		for(int i = 0; i < 3; i++) {
+			for(int j = 0; j < 3; j++) {
+				assertEquals(" ", ttt.getMove(i, j));
+			}
+		}
 	}
 	
 	@Test
 	public void testMarkXInUpperRightCorner() {
-		ttt.setPlayer();
 		ttt.setMove(0,2);
 		assertEquals("X",ttt.getMove(0,2));	
 	}
 	
 	@Test
 	public void testMarkOInBottomLeftCorner() {
+		ttt.setMove(0,2);
 		ttt.setMove(2,0);
 		assertEquals("O",ttt.getMove(2,0));
 	}
@@ -36,76 +40,66 @@ public class TicTacToeTest {
 	public void testUnableToMarkOverExistingMark() {
 		ttt.setMove(2,0);
 		ttt.setMove(2,0);
-		assertTrue(ttt.checkForValidMove(2,0));
+		assertEquals("X", ttt.getMove(2,0));
 	}
 	
 	@Test
 	public void testGameIsNotOverAfterTheFirstMark() {
 		ttt.setMove(2,0);
-		assertTrue(ttt.ongoingGame());
+		assertEquals(" ", ttt.getWinner());
 	}
 	
 	@Test
 	public void testGameIsWonByXHorizontallyAcrossTopRow() {
-		ttt.setPlayer();
 		ttt.setMove(0,0);
+		ttt.setMove(1,0);
 		ttt.setMove(0,1);
+		ttt.setMove(1,1);
 		ttt.setMove(0,2);
-		ttt.checkForHorizontalWin();
-		assertEquals(ttt.getWinner(),"X");
+		assertEquals("X", ttt.getWinner());
 	}
 	
 	@Test
 	public void testThatGameIsWonDiagonally(){
-		ttt.setPlayer();
 		ttt.setMove(0,0);
+		ttt.setMove(0,2);
 		ttt.setMove(1,1);
+		ttt.setMove(0,1);
 		ttt.setMove(2,2);
-		ttt.checkForDiagonalWin();
-		assertEquals(ttt.getWinner(),"X");
+		assertEquals("X", ttt.getWinner());
 	}
 	@Test
 	public void testThatGameIsWonDiagonally2(){
-		ttt.setPlayer();
 		ttt.setMove(0,2);
+		ttt.setMove(0,0);
 		ttt.setMove(1,1);
+		ttt.setMove(0,1);
 		ttt.setMove(2,0);
-		ttt.checkForDiagonalWin();
-		assertEquals(ttt.getWinner(),"X");
+		assertEquals("X", ttt.getWinner());
 		
 	}
 	
 	@Test
 	public void testThatGameIsWonVertically(){
-		ttt.setPlayer();
 		ttt.setMove(0,0);
+		ttt.setMove(0,1);
 		ttt.setMove(1,0);
+		ttt.setMove(0,2);
 		ttt.setMove(2,0);
-		ttt.checkForVerticalWin();
-		assertEquals(ttt.getWinner(),"X");
+		assertEquals("X", ttt.getWinner());
 	}
 	
 	@Test
 	public void testGameIsOverByTieIfAllLocationsAreFilled() {
-		ttt.setPlayer();
 		ttt.setMove(0,0);
-		ttt.setPlayer();
 		ttt.setMove(0,1);
-		ttt.setPlayer();
 		ttt.setMove(0,2);
-		ttt.setPlayer();
 		ttt.setMove(2,0);
-		ttt.setPlayer();
 		ttt.setMove(2,1);
-		ttt.setPlayer();
 		ttt.setMove(2,2);
-		ttt.setPlayer();
 		ttt.setMove(1,0);
-		ttt.setPlayer();
 		ttt.setMove(1,1);
-		ttt.setPlayer();
 		ttt.setMove(1,2);
-		ttt.checkForTie();
-		assertEquals(ttt.getWinner(), "TIE");
+		assertEquals("TIE", ttt.getWinner());
 	}
 }

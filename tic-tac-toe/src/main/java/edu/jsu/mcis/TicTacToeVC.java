@@ -3,14 +3,13 @@ package edu.jsu.mcis;
 import javax.swing.*;
 import java.awt.event.*;
 import java.awt.*;
-import javafx.application.Application;
-
 public class TicTacToeVC extends JPanel implements ActionListener{
-	private TicTacToe model;
+	public TicTacToe model;
 	private JButton[][] button;
 	
 	public TicTacToeVC(){
 		model = new TicTacToe();
+		model.setNewBoard();
 		button = new JButton[3][3];
 		setLayout(new GridLayout(3,3));
 		for(int i=0;i<button.length;i++){
@@ -26,24 +25,22 @@ public class TicTacToeVC extends JPanel implements ActionListener{
 	}
 	
 	public void checkForWin(){
-		String winner = "";
-		
-		model.checkForHorizontalWin();
-		model.checkForVerticalWin();
-		model.checkForDiagonalWin();
-		model.checkForTie();
-		winner = model.getWinner();
-		if(winner.length()>0 && winner.length() < 3){
-			MyDialog d = new MyDialog("The winner is "+ winner);
-			Thread t = new Thread(d);
-			t.start();
+		String s = "";
+		String winner = model.getWinner();
+		if(winner.equals("X")){
+			s = "X";
 		}
-		else{
-			MyDialog md = new MyDialog(winner);
-			Thread r = new Thread(md);
-			r.start();
+		else if (winner.equals("O")){
+			s = "O";
 		}
-			
+		else if(winner.equals("TIE")){
+			s = "TIE";
+		}
+		if(s.length()>0){
+				MyDialog d = new MyDialog("The winner is "+s);
+				Thread t = new Thread(d);
+				t.start();
+		}
 	}
 	
 	public void actionPerformed(ActionEvent event){
@@ -56,11 +53,11 @@ public class TicTacToeVC extends JPanel implements ActionListener{
 		checkForWin();
 	}
 	
-	/*public static void main (String[] args){
+	public static void main (String[] args){
 		JFrame win = new JFrame("Tic Tac Toe");
 		win.add(new TicTacToeVC());
 		win.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		win.pack();
 		win.setVisible(true);
-	}*/
+	}
 }

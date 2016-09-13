@@ -1,0 +1,800 @@
+==============================================================================
+20160912 19:18:21.623 - INFO - + START SUITE: TicTacToeGUITest [ ]
+==============================================================================
+20160912 19:18:21.623 - INFO - +- START TEST: Win Diagonally as X [ ]
+------------------------------------------------------------------------------
+20160912 19:18:21.623 - INFO - +-- START KW: Start New Game [ ]
+20160912 19:18:21.638 - INFO - +--- START KW: SwingLibrary.Start Application [ edu.jsu.mcis.TicTacToeVC ]
+20160912 19:18:21.669 - INFO - +--- END KW: SwingLibrary.Start Application (31)
+20160912 19:18:21.669 - INFO - +--- START KW: SwingLibrary.Select Window [ Tic Tac Toe ]
+20160912 19:18:21.763 - DEBUG - Jemmy: Start to wait frame "Frame with name or title 'Tic Tac Toe'" opened
+20160912 19:18:21.763 - DEBUG - Jemmy: Frame "Frame with name or title 'Tic Tac Toe'" has been opened in 0 milliseconds
+    javax.swing.JFrame[frame0,0,0,316x339,layout=java.awt.BorderLayout,title=Tic Tac Toe,resizable,normal,defaultCloseOperation=EXIT_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,300x300,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+20160912 19:18:21.779 - INFO - +--- END KW: SwingLibrary.Select Window (110)
+20160912 19:18:21.779 - INFO - +-- END KW: Start New Game (156)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:21.779 - INFO - +-- START KW: Mark Location [ 1 | 1 ]
+20160912 19:18:21.779 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:21.794 - INFO - ${component} = Location11
+20160912 19:18:21.794 - INFO - +--- END KW: BuiltIn.Catenate (15)
+20160912 19:18:21.794 - INFO - +--- START KW: SwingLibrary.Click On Component [ ${component} ]
+20160912 19:18:21.966 - DEBUG - Jemmy: Waiting for "Location11" subcomponent
+20160912 19:18:21.966 - DEBUG - Jemmy: Start to wait action "Wait for "Location11" subcomponent to be displayed"
+20160912 19:18:21.966 - DEBUG - Jemmy: "Wait for "Location11" subcomponent to be displayed" action has been produced in 0 milliseconds with result 
+    : javax.swing.JButton[Location11,100,100,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=,defaultCapable=true]
+20160912 19:18:21.982 - INFO - +--- END KW: SwingLibrary.Click On Component (188)
+20160912 19:18:21.982 - INFO - +--- START KW: BuiltIn.Sleep [ 1s ]
+20160912 19:18:22.982 - INFO - Slept 1 second
+20160912 19:18:22.982 - INFO - +--- END KW: BuiltIn.Sleep (1000)
+20160912 19:18:22.982 - INFO - +-- END KW: Mark Location (1203)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:22.982 - INFO - +-- START KW: Check Location [ 1 | 1 | X ]
+20160912 19:18:22.998 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:23.013 - INFO - ${component} = Location11
+20160912 19:18:23.029 - INFO - +--- END KW: BuiltIn.Catenate (15)
+20160912 19:18:23.029 - INFO - +--- START KW: SwingLibrary.Get Button Text [ ${component} ]
+20160912 19:18:23.076 - DEBUG - Jemmy: Waiting for "Location11" subcomponent
+20160912 19:18:23.076 - DEBUG - Jemmy: Start to wait action "Wait for "Location11" subcomponent to be displayed"
+20160912 19:18:23.076 - DEBUG - Jemmy: "Wait for "Location11" subcomponent to be displayed" action has been produced in 0 milliseconds with result 
+    : javax.swing.JButton[Location11,100,100,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=X,defaultCapable=true]
+20160912 19:18:23.091 - INFO - ${text} = X
+20160912 19:18:23.091 - INFO - +--- END KW: SwingLibrary.Get Button Text (62)
+20160912 19:18:23.091 - INFO - +--- START KW: BuiltIn.Should Be Equal [ ${text} | ${mark} ]
+20160912 19:18:23.091 - DEBUG - Argument types are:
+<type 'unicode'>
+<type 'unicode'>
+20160912 19:18:23.091 - INFO - +--- END KW: BuiltIn.Should Be Equal (0)
+20160912 19:18:23.091 - INFO - +-- END KW: Check Location (109)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:23.107 - INFO - +-- START KW: Mark Location [ 0 | 1 ]
+20160912 19:18:23.107 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:23.107 - INFO - ${component} = Location01
+20160912 19:18:23.107 - INFO - +--- END KW: BuiltIn.Catenate (0)
+20160912 19:18:23.107 - INFO - +--- START KW: SwingLibrary.Click On Component [ ${component} ]
+20160912 19:18:23.107 - DEBUG - Jemmy: Waiting for "Location01" subcomponent
+20160912 19:18:23.107 - DEBUG - Jemmy: Start to wait action "Wait for "Location01" subcomponent to be displayed"
+20160912 19:18:23.107 - DEBUG - Jemmy: "Wait for "Location01" subcomponent to be displayed" action has been produced in 0 milliseconds with result 
+    : javax.swing.JButton[Location01,100,0,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=,defaultCapable=true]
+20160912 19:18:23.123 - INFO - +--- END KW: SwingLibrary.Click On Component (16)
+20160912 19:18:23.123 - INFO - +--- START KW: BuiltIn.Sleep [ 1s ]
+20160912 19:18:24.123 - INFO - Slept 1 second
+20160912 19:18:24.123 - INFO - +--- END KW: BuiltIn.Sleep (1000)
+20160912 19:18:24.123 - INFO - +-- END KW: Mark Location (1032)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:24.123 - INFO - +-- START KW: Check Location [ 0 | 1 | O ]
+20160912 19:18:24.138 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:24.138 - INFO - ${component} = Location01
+20160912 19:18:24.138 - INFO - +--- END KW: BuiltIn.Catenate (0)
+20160912 19:18:24.154 - INFO - +--- START KW: SwingLibrary.Get Button Text [ ${component} ]
+20160912 19:18:24.154 - DEBUG - Jemmy: Waiting for "Location01" subcomponent
+20160912 19:18:24.154 - DEBUG - Jemmy: Start to wait action "Wait for "Location01" subcomponent to be displayed"
+20160912 19:18:24.154 - DEBUG - Jemmy: "Wait for "Location01" subcomponent to be displayed" action has been produced in 0 milliseconds with result 
+    : javax.swing.JButton[Location01,100,0,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=O,defaultCapable=true]
+20160912 19:18:24.154 - INFO - ${text} = O
+20160912 19:18:24.170 - INFO - +--- END KW: SwingLibrary.Get Button Text (16)
+20160912 19:18:24.170 - INFO - +--- START KW: BuiltIn.Should Be Equal [ ${text} | ${mark} ]
+20160912 19:18:24.170 - DEBUG - Argument types are:
+<type 'unicode'>
+<type 'unicode'>
+20160912 19:18:24.170 - INFO - +--- END KW: BuiltIn.Should Be Equal (0)
+20160912 19:18:24.170 - INFO - +-- END KW: Check Location (47)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:24.185 - INFO - +-- START KW: Mark Location [ 0 | 0 ]
+20160912 19:18:24.185 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:24.185 - INFO - ${component} = Location00
+20160912 19:18:24.185 - INFO - +--- END KW: BuiltIn.Catenate (0)
+20160912 19:18:24.185 - INFO - +--- START KW: SwingLibrary.Click On Component [ ${component} ]
+20160912 19:18:24.201 - DEBUG - Jemmy: Waiting for "Location00" subcomponent
+20160912 19:18:24.201 - DEBUG - Jemmy: Start to wait action "Wait for "Location00" subcomponent to be displayed"
+20160912 19:18:24.201 - DEBUG - Jemmy: "Wait for "Location00" subcomponent to be displayed" action has been produced in 0 milliseconds with result 
+    : javax.swing.JButton[Location00,0,0,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=,defaultCapable=true]
+20160912 19:18:24.201 - INFO - +--- END KW: SwingLibrary.Click On Component (16)
+20160912 19:18:24.216 - INFO - +--- START KW: BuiltIn.Sleep [ 1s ]
+20160912 19:18:25.217 - INFO - Slept 1 second
+20160912 19:18:25.217 - INFO - +--- END KW: BuiltIn.Sleep (1001)
+20160912 19:18:25.217 - INFO - +-- END KW: Mark Location (1032)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:25.217 - INFO - +-- START KW: Check Location [ 0 | 0 | X ]
+20160912 19:18:25.232 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:25.232 - INFO - ${component} = Location00
+20160912 19:18:25.232 - INFO - +--- END KW: BuiltIn.Catenate (0)
+20160912 19:18:25.248 - INFO - +--- START KW: SwingLibrary.Get Button Text [ ${component} ]
+20160912 19:18:25.248 - DEBUG - Jemmy: Waiting for "Location00" subcomponent
+20160912 19:18:25.248 - DEBUG - Jemmy: Start to wait action "Wait for "Location00" subcomponent to be displayed"
+20160912 19:18:25.248 - DEBUG - Jemmy: "Wait for "Location00" subcomponent to be displayed" action has been produced in 0 milliseconds with result 
+    : javax.swing.JButton[Location00,0,0,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=X,defaultCapable=true]
+20160912 19:18:25.248 - INFO - ${text} = X
+20160912 19:18:25.263 - INFO - +--- END KW: SwingLibrary.Get Button Text (16)
+20160912 19:18:25.263 - INFO - +--- START KW: BuiltIn.Should Be Equal [ ${text} | ${mark} ]
+20160912 19:18:25.263 - DEBUG - Argument types are:
+<type 'unicode'>
+<type 'unicode'>
+20160912 19:18:25.263 - INFO - +--- END KW: BuiltIn.Should Be Equal (0)
+20160912 19:18:25.263 - INFO - +-- END KW: Check Location (46)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:25.263 - INFO - +-- START KW: Mark Location [ 0 | 2 ]
+20160912 19:18:25.279 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:25.279 - INFO - ${component} = Location02
+20160912 19:18:25.279 - INFO - +--- END KW: BuiltIn.Catenate (0)
+20160912 19:18:25.279 - INFO - +--- START KW: SwingLibrary.Click On Component [ ${component} ]
+20160912 19:18:25.279 - DEBUG - Jemmy: Waiting for "Location02" subcomponent
+20160912 19:18:25.279 - DEBUG - Jemmy: Start to wait action "Wait for "Location02" subcomponent to be displayed"
+20160912 19:18:25.279 - DEBUG - Jemmy: "Wait for "Location02" subcomponent to be displayed" action has been produced in 0 milliseconds with result 
+    : javax.swing.JButton[Location02,200,0,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=,defaultCapable=true]
+20160912 19:18:25.295 - INFO - +--- END KW: SwingLibrary.Click On Component (16)
+20160912 19:18:25.295 - INFO - +--- START KW: BuiltIn.Sleep [ 1s ]
+20160912 19:18:26.295 - INFO - Slept 1 second
+20160912 19:18:26.295 - INFO - +--- END KW: BuiltIn.Sleep (1000)
+20160912 19:18:26.295 - INFO - +-- END KW: Mark Location (1032)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:26.295 - INFO - +-- START KW: Check Location [ 0 | 2 | O ]
+20160912 19:18:26.310 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:26.310 - INFO - ${component} = Location02
+20160912 19:18:26.310 - INFO - +--- END KW: BuiltIn.Catenate (0)
+20160912 19:18:26.326 - INFO - +--- START KW: SwingLibrary.Get Button Text [ ${component} ]
+20160912 19:18:26.326 - DEBUG - Jemmy: Waiting for "Location02" subcomponent
+20160912 19:18:26.326 - DEBUG - Jemmy: Start to wait action "Wait for "Location02" subcomponent to be displayed"
+20160912 19:18:26.326 - DEBUG - Jemmy: "Wait for "Location02" subcomponent to be displayed" action has been produced in 0 milliseconds with result 
+    : javax.swing.JButton[Location02,200,0,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=O,defaultCapable=true]
+20160912 19:18:26.342 - INFO - ${text} = O
+20160912 19:18:26.342 - INFO - +--- END KW: SwingLibrary.Get Button Text (16)
+20160912 19:18:26.342 - INFO - +--- START KW: BuiltIn.Should Be Equal [ ${text} | ${mark} ]
+20160912 19:18:26.357 - DEBUG - Argument types are:
+<type 'unicode'>
+<type 'unicode'>
+20160912 19:18:26.357 - INFO - +--- END KW: BuiltIn.Should Be Equal (15)
+20160912 19:18:26.357 - INFO - +-- END KW: Check Location (62)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:26.357 - INFO - +-- START KW: Mark Location [ 2 | 2 ]
+20160912 19:18:26.373 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:26.373 - INFO - ${component} = Location22
+20160912 19:18:26.373 - INFO - +--- END KW: BuiltIn.Catenate (0)
+20160912 19:18:26.388 - INFO - +--- START KW: SwingLibrary.Click On Component [ ${component} ]
+20160912 19:18:26.388 - DEBUG - Jemmy: Waiting for "Location22" subcomponent
+20160912 19:18:26.388 - DEBUG - Jemmy: Start to wait action "Wait for "Location22" subcomponent to be displayed"
+20160912 19:18:26.388 - DEBUG - Jemmy: "Wait for "Location22" subcomponent to be displayed" action has been produced in 0 milliseconds with result 
+    : javax.swing.JButton[Location22,200,200,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=,defaultCapable=true]
+20160912 19:18:26.404 - INFO - +--- END KW: SwingLibrary.Click On Component (16)
+20160912 19:18:26.404 - INFO - +--- START KW: BuiltIn.Sleep [ 1s ]
+20160912 19:18:27.420 - INFO - Slept 1 second
+20160912 19:18:27.420 - INFO - +--- END KW: BuiltIn.Sleep (1016)
+20160912 19:18:27.420 - INFO - +-- END KW: Mark Location (1063)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:27.420 - INFO - +-- START KW: Check Location [ 2 | 2 | X ]
+20160912 19:18:27.435 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:27.435 - INFO - ${component} = Location22
+20160912 19:18:27.435 - INFO - +--- END KW: BuiltIn.Catenate (0)
+20160912 19:18:27.435 - INFO - +--- START KW: SwingLibrary.Get Button Text [ ${component} ]
+20160912 19:18:27.451 - DEBUG - Jemmy: Waiting for "Location22" subcomponent
+20160912 19:18:27.451 - DEBUG - Jemmy: Start to wait action "Wait for "Location22" subcomponent to be displayed"
+20160912 19:18:27.467 - DEBUG - Jemmy: "Wait for "Location22" subcomponent to be displayed" action has been produced in 0 milliseconds with result 
+    : javax.swing.JButton[Location22,200,200,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=X,defaultCapable=true]
+20160912 19:18:27.467 - INFO - ${text} = X
+20160912 19:18:27.467 - INFO - +--- END KW: SwingLibrary.Get Button Text (32)
+20160912 19:18:27.467 - INFO - +--- START KW: BuiltIn.Should Be Equal [ ${text} | ${mark} ]
+20160912 19:18:27.482 - DEBUG - Argument types are:
+<type 'unicode'>
+<type 'unicode'>
+20160912 19:18:27.482 - INFO - +--- END KW: BuiltIn.Should Be Equal (15)
+20160912 19:18:27.482 - INFO - +-- END KW: Check Location (62)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:27.482 - INFO - +-- START KW: Winner Should Be [ X ]
+20160912 19:18:27.482 - INFO - +--- START KW: SwingLibrary.Select Dialog [ Game Over ]
+20160912 19:18:27.498 - DEBUG - Jemmy: Start to wait dialog "Dialog with name or title 'Game Over'" opened
+20160912 19:18:27.498 - DEBUG - Jemmy: Dialog "Dialog with name or title 'Game Over'" has been opened in 0 milliseconds
+    javax.swing.JDialog[dialog0,549,325,268x119,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=Game Over,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,3,26,262x90,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+20160912 19:18:27.498 - INFO - +--- END KW: SwingLibrary.Select Dialog (16)
+20160912 19:18:27.514 - INFO - +--- START KW: BuiltIn.Catenate [ The winner is | ${winner} ]
+20160912 19:18:27.514 - INFO - ${message} = The winner is X
+20160912 19:18:27.514 - INFO - +--- END KW: BuiltIn.Catenate (16)
+20160912 19:18:27.514 - INFO - +--- START KW: SwingLibrary.Label Text Should Be [ OptionPane.label | ${message} ]
+20160912 19:18:27.529 - DEBUG - Jemmy: Waiting for "OptionPane.label" subcomponent
+20160912 19:18:27.529 - DEBUG - Jemmy: Start to wait action "Wait for "OptionPane.label" subcomponent to be displayed"
+20160912 19:18:27.529 - DEBUG - Jemmy: "Wait for "OptionPane.label" subcomponent to be displayed" action has been produced in 0 milliseconds with result 
+    : javax.swing.JLabel[OptionPane.label,0,8,195x16,alignmentX=0.0,alignmentY=0.0,border=,flags=8388608,maximumSize=,minimumSize=,preferredSize=,defaultIcon=,disabledIcon=,horizontalAlignment=LEADING,horizontalTextPosition=TRAILING,iconTextGap=4,labelFor=,text=The winner is X,verticalAlignment=CENTER,verticalTextPosition=CENTER]
+20160912 19:18:27.529 - INFO - +--- END KW: SwingLibrary.Label Text Should Be (15)
+20160912 19:18:27.529 - INFO - +--- START KW: SwingLibrary.Close Dialog [ Game Over ]
+20160912 19:18:27.529 - DEBUG - Jemmy: Start to wait dialog "Dialog with name or title 'Game Over'" opened
+20160912 19:18:27.529 - DEBUG - Jemmy: Dialog "Dialog with name or title 'Game Over'" has been opened in 0 milliseconds
+    javax.swing.JDialog[dialog0,549,325,268x119,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=Game Over,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,3,26,262x90,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+20160912 19:18:27.529 - DEBUG - Jemmy: Closing window
+    javax.swing.JDialog[dialog0,549,325,268x119,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=Game Over,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,3,26,262x90,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+20160912 19:18:27.529 - DEBUG - Jemmy: Wait window to be closed 
+    : javax.swing.JDialog[dialog0,549,325,268x119,hidden,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=Game Over,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,3,26,262x90,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+20160912 19:18:27.545 - INFO - +--- END KW: SwingLibrary.Close Dialog (16)
+20160912 19:18:27.545 - INFO - +--- START KW: SwingLibrary.Close Window [ Tic Tac Toe ]
+20160912 19:18:27.545 - DEBUG - Jemmy: Start to wait frame "Frame with name or title 'Tic Tac Toe'" opened
+20160912 19:18:27.545 - DEBUG - Jemmy: Frame "Frame with name or title 'Tic Tac Toe'" has been opened in 0 milliseconds
+    javax.swing.JFrame[frame0,0,0,316x339,invalid,layout=java.awt.BorderLayout,title=Tic Tac Toe,resizable,normal,defaultCloseOperation=EXIT_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,300x300,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+20160912 19:18:27.810 - INFO - +--- END KW: SwingLibrary.Close Window (265)
+20160912 19:18:27.810 - INFO - +-- END KW: Winner Should Be (328)
+------------------------------------------------------------------------------
+20160912 19:18:27.826 - INFO - +- END TEST: Win Diagonally as X (6187)
+------------------------------------------------------------------------------
+20160912 19:18:27.842 - INFO - +- START TEST: Win Horizontally as O [ ]
+------------------------------------------------------------------------------
+20160912 19:18:27.842 - INFO - +-- START KW: Start New Game [ ]
+20160912 19:18:27.842 - INFO - +--- START KW: SwingLibrary.Start Application [ edu.jsu.mcis.TicTacToeVC ]
+20160912 19:18:27.873 - INFO - +--- END KW: SwingLibrary.Start Application (31)
+20160912 19:18:27.873 - INFO - +--- START KW: SwingLibrary.Select Window [ Tic Tac Toe ]
+20160912 19:18:27.873 - DEBUG - Jemmy: Start to wait frame "Frame with name or title 'Tic Tac Toe'" opened
+20160912 19:18:27.873 - DEBUG - Jemmy: Frame "Frame with name or title 'Tic Tac Toe'" has been opened in 0 milliseconds
+    javax.swing.JFrame[frame1,0,0,316x339,layout=java.awt.BorderLayout,title=Tic Tac Toe,resizable,normal,defaultCloseOperation=EXIT_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,300x300,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+20160912 19:18:27.889 - INFO - +--- END KW: SwingLibrary.Select Window (16)
+20160912 19:18:27.889 - INFO - +-- END KW: Start New Game (47)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:27.889 - INFO - +-- START KW: Mark Location [ 1 | 1 ]
+20160912 19:18:27.889 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:27.889 - INFO - ${component} = Location11
+20160912 19:18:27.889 - INFO - +--- END KW: BuiltIn.Catenate (0)
+20160912 19:18:27.904 - INFO - +--- START KW: SwingLibrary.Click On Component [ ${component} ]
+20160912 19:18:27.904 - DEBUG - Jemmy: Waiting for "Location11" subcomponent
+20160912 19:18:27.904 - DEBUG - Jemmy: Start to wait action "Wait for "Location11" subcomponent to be displayed"
+20160912 19:18:27.904 - DEBUG - Jemmy: "Wait for "Location11" subcomponent to be displayed" action has been produced in 0 milliseconds with result 
+    : javax.swing.JButton[Location11,100,100,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=,defaultCapable=true]
+20160912 19:18:27.904 - INFO - +--- END KW: SwingLibrary.Click On Component (15)
+20160912 19:18:27.904 - INFO - +--- START KW: BuiltIn.Sleep [ 1s ]
+20160912 19:18:28.904 - INFO - Slept 1 second
+20160912 19:18:28.904 - INFO - +--- END KW: BuiltIn.Sleep (1000)
+20160912 19:18:28.904 - INFO - +-- END KW: Mark Location (1015)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:28.904 - INFO - +-- START KW: Check Location [ 1 | 1 | X ]
+20160912 19:18:28.904 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:28.920 - INFO - ${component} = Location11
+20160912 19:18:28.920 - INFO - +--- END KW: BuiltIn.Catenate (16)
+20160912 19:18:28.920 - INFO - +--- START KW: SwingLibrary.Get Button Text [ ${component} ]
+20160912 19:18:28.920 - DEBUG - Jemmy: Waiting for "Location11" subcomponent
+20160912 19:18:28.920 - DEBUG - Jemmy: Start to wait action "Wait for "Location11" subcomponent to be displayed"
+20160912 19:18:28.920 - DEBUG - Jemmy: "Wait for "Location11" subcomponent to be displayed" action has been produced in 0 milliseconds with result 
+    : javax.swing.JButton[Location11,100,100,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=X,defaultCapable=true]
+20160912 19:18:28.935 - INFO - ${text} = X
+20160912 19:18:28.935 - INFO - +--- END KW: SwingLibrary.Get Button Text (15)
+20160912 19:18:28.935 - INFO - +--- START KW: BuiltIn.Should Be Equal [ ${text} | ${mark} ]
+20160912 19:18:28.935 - DEBUG - Argument types are:
+<type 'unicode'>
+<type 'unicode'>
+20160912 19:18:28.935 - INFO - +--- END KW: BuiltIn.Should Be Equal (0)
+20160912 19:18:28.935 - INFO - +-- END KW: Check Location (31)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:28.935 - INFO - +-- START KW: Mark Location [ 2 | 0 ]
+20160912 19:18:28.951 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:28.951 - INFO - ${component} = Location20
+20160912 19:18:28.951 - INFO - +--- END KW: BuiltIn.Catenate (0)
+20160912 19:18:28.951 - INFO - +--- START KW: SwingLibrary.Click On Component [ ${component} ]
+20160912 19:18:28.951 - DEBUG - Jemmy: Waiting for "Location20" subcomponent
+20160912 19:18:28.951 - DEBUG - Jemmy: Start to wait action "Wait for "Location20" subcomponent to be displayed"
+20160912 19:18:28.951 - DEBUG - Jemmy: "Wait for "Location20" subcomponent to be displayed" action has been produced in 0 milliseconds with result 
+    : javax.swing.JButton[Location20,0,200,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=,defaultCapable=true]
+20160912 19:18:28.967 - INFO - +--- END KW: SwingLibrary.Click On Component (16)
+20160912 19:18:28.967 - INFO - +--- START KW: BuiltIn.Sleep [ 1s ]
+20160912 19:18:29.982 - INFO - Slept 1 second
+20160912 19:18:29.982 - INFO - +--- END KW: BuiltIn.Sleep (1015)
+20160912 19:18:29.982 - INFO - +-- END KW: Mark Location (1047)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:29.982 - INFO - +-- START KW: Check Location [ 2 | 0 | O ]
+20160912 19:18:29.982 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:29.998 - INFO - ${component} = Location20
+20160912 19:18:29.998 - INFO - +--- END KW: BuiltIn.Catenate (16)
+20160912 19:18:29.998 - INFO - +--- START KW: SwingLibrary.Get Button Text [ ${component} ]
+20160912 19:18:29.998 - DEBUG - Jemmy: Waiting for "Location20" subcomponent
+20160912 19:18:29.998 - DEBUG - Jemmy: Start to wait action "Wait for "Location20" subcomponent to be displayed"
+20160912 19:18:29.998 - DEBUG - Jemmy: "Wait for "Location20" subcomponent to be displayed" action has been produced in 0 milliseconds with result 
+    : javax.swing.JButton[Location20,0,200,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=O,defaultCapable=true]
+20160912 19:18:29.998 - INFO - ${text} = O
+20160912 19:18:29.998 - INFO - +--- END KW: SwingLibrary.Get Button Text (0)
+20160912 19:18:30.014 - INFO - +--- START KW: BuiltIn.Should Be Equal [ ${text} | ${mark} ]
+20160912 19:18:30.014 - DEBUG - Argument types are:
+<type 'unicode'>
+<type 'unicode'>
+20160912 19:18:30.014 - INFO - +--- END KW: BuiltIn.Should Be Equal (0)
+20160912 19:18:30.014 - INFO - +-- END KW: Check Location (32)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:30.014 - INFO - +-- START KW: Mark Location [ 0 | 0 ]
+20160912 19:18:30.029 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:30.029 - INFO - ${component} = Location00
+20160912 19:18:30.029 - INFO - +--- END KW: BuiltIn.Catenate (15)
+20160912 19:18:30.029 - INFO - +--- START KW: SwingLibrary.Click On Component [ ${component} ]
+20160912 19:18:30.029 - DEBUG - Jemmy: Waiting for "Location00" subcomponent
+20160912 19:18:30.029 - DEBUG - Jemmy: Start to wait action "Wait for "Location00" subcomponent to be displayed"
+20160912 19:18:30.029 - DEBUG - Jemmy: "Wait for "Location00" subcomponent to be displayed" action has been produced in 0 milliseconds with result 
+    : javax.swing.JButton[Location00,0,0,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=,defaultCapable=true]
+20160912 19:18:30.045 - INFO - +--- END KW: SwingLibrary.Click On Component (16)
+20160912 19:18:30.045 - INFO - +--- START KW: BuiltIn.Sleep [ 1s ]
+20160912 19:18:31.045 - INFO - Slept 1 second
+20160912 19:18:31.045 - INFO - +--- END KW: BuiltIn.Sleep (1000)
+20160912 19:18:31.045 - INFO - +-- END KW: Mark Location (1031)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:31.045 - INFO - +-- START KW: Check Location [ 0 | 0 | X ]
+20160912 19:18:31.045 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:31.045 - INFO - ${component} = Location00
+20160912 19:18:31.045 - INFO - +--- END KW: BuiltIn.Catenate (0)
+20160912 19:18:31.061 - INFO - +--- START KW: SwingLibrary.Get Button Text [ ${component} ]
+20160912 19:18:31.061 - DEBUG - Jemmy: Waiting for "Location00" subcomponent
+20160912 19:18:31.061 - DEBUG - Jemmy: Start to wait action "Wait for "Location00" subcomponent to be displayed"
+20160912 19:18:31.061 - DEBUG - Jemmy: "Wait for "Location00" subcomponent to be displayed" action has been produced in 0 milliseconds with result 
+    : javax.swing.JButton[Location00,0,0,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=X,defaultCapable=true]
+20160912 19:18:31.061 - INFO - ${text} = X
+20160912 19:18:31.061 - INFO - +--- END KW: SwingLibrary.Get Button Text (0)
+20160912 19:18:31.061 - INFO - +--- START KW: BuiltIn.Should Be Equal [ ${text} | ${mark} ]
+20160912 19:18:31.061 - DEBUG - Argument types are:
+<type 'unicode'>
+<type 'unicode'>
+20160912 19:18:31.061 - INFO - +--- END KW: BuiltIn.Should Be Equal (0)
+20160912 19:18:31.061 - INFO - +-- END KW: Check Location (16)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:31.076 - INFO - +-- START KW: Mark Location [ 2 | 2 ]
+20160912 19:18:31.076 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:31.076 - INFO - ${component} = Location22
+20160912 19:18:31.092 - INFO - +--- END KW: BuiltIn.Catenate (16)
+20160912 19:18:31.092 - INFO - +--- START KW: SwingLibrary.Click On Component [ ${component} ]
+20160912 19:18:31.092 - DEBUG - Jemmy: Waiting for "Location22" subcomponent
+20160912 19:18:31.092 - DEBUG - Jemmy: Start to wait action "Wait for "Location22" subcomponent to be displayed"
+20160912 19:18:31.092 - DEBUG - Jemmy: "Wait for "Location22" subcomponent to be displayed" action has been produced in 0 milliseconds with result 
+    : javax.swing.JButton[Location22,200,200,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=,defaultCapable=true]
+20160912 19:18:31.107 - INFO - +--- END KW: SwingLibrary.Click On Component (15)
+20160912 19:18:31.107 - INFO - +--- START KW: BuiltIn.Sleep [ 1s ]
+20160912 19:18:32.108 - INFO - Slept 1 second
+20160912 19:18:32.108 - INFO - +--- END KW: BuiltIn.Sleep (1001)
+20160912 19:18:32.108 - INFO - +-- END KW: Mark Location (1032)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:32.108 - INFO - +-- START KW: Check Location [ 2 | 2 | O ]
+20160912 19:18:32.108 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:32.123 - INFO - ${component} = Location22
+20160912 19:18:32.123 - INFO - +--- END KW: BuiltIn.Catenate (15)
+20160912 19:18:32.123 - INFO - +--- START KW: SwingLibrary.Get Button Text [ ${component} ]
+20160912 19:18:32.139 - DEBUG - Jemmy: Waiting for "Location22" subcomponent
+20160912 19:18:32.139 - DEBUG - Jemmy: Start to wait action "Wait for "Location22" subcomponent to be displayed"
+20160912 19:18:32.139 - DEBUG - Jemmy: "Wait for "Location22" subcomponent to be displayed" action has been produced in 0 milliseconds with result 
+    : javax.swing.JButton[Location22,200,200,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=O,defaultCapable=true]
+20160912 19:18:32.139 - INFO - ${text} = O
+20160912 19:18:32.139 - INFO - +--- END KW: SwingLibrary.Get Button Text (16)
+20160912 19:18:32.139 - INFO - +--- START KW: BuiltIn.Should Be Equal [ ${text} | ${mark} ]
+20160912 19:18:32.139 - DEBUG - Argument types are:
+<type 'unicode'>
+<type 'unicode'>
+20160912 19:18:32.139 - INFO - +--- END KW: BuiltIn.Should Be Equal (0)
+20160912 19:18:32.139 - INFO - +-- END KW: Check Location (31)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:32.154 - INFO - +-- START KW: Mark Location [ 0 | 2 ]
+20160912 19:18:32.154 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:32.154 - INFO - ${component} = Location02
+20160912 19:18:32.154 - INFO - +--- END KW: BuiltIn.Catenate (0)
+20160912 19:18:32.154 - INFO - +--- START KW: SwingLibrary.Click On Component [ ${component} ]
+20160912 19:18:32.154 - DEBUG - Jemmy: Waiting for "Location02" subcomponent
+20160912 19:18:32.154 - DEBUG - Jemmy: Start to wait action "Wait for "Location02" subcomponent to be displayed"
+20160912 19:18:32.154 - DEBUG - Jemmy: "Wait for "Location02" subcomponent to be displayed" action has been produced in 0 milliseconds with result 
+    : javax.swing.JButton[Location02,200,0,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=,defaultCapable=true]
+20160912 19:18:32.170 - INFO - +--- END KW: SwingLibrary.Click On Component (16)
+20160912 19:18:32.170 - INFO - +--- START KW: BuiltIn.Sleep [ 1s ]
+20160912 19:18:33.186 - INFO - Slept 1 second
+20160912 19:18:33.186 - INFO - +--- END KW: BuiltIn.Sleep (1016)
+20160912 19:18:33.186 - INFO - +-- END KW: Mark Location (1032)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:33.186 - INFO - +-- START KW: Check Location [ 0 | 2 | X ]
+20160912 19:18:33.186 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:33.186 - INFO - ${component} = Location02
+20160912 19:18:33.186 - INFO - +--- END KW: BuiltIn.Catenate (0)
+20160912 19:18:33.186 - INFO - +--- START KW: SwingLibrary.Get Button Text [ ${component} ]
+20160912 19:18:33.186 - DEBUG - Jemmy: Waiting for "Location02" subcomponent
+20160912 19:18:33.186 - DEBUG - Jemmy: Start to wait action "Wait for "Location02" subcomponent to be displayed"
+20160912 19:18:33.201 - DEBUG - Jemmy: "Wait for "Location02" subcomponent to be displayed" action has been produced in 15 milliseconds with result 
+    : javax.swing.JButton[Location02,200,0,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=X,defaultCapable=true]
+20160912 19:18:33.201 - INFO - ${text} = X
+20160912 19:18:33.201 - INFO - +--- END KW: SwingLibrary.Get Button Text (15)
+20160912 19:18:33.201 - INFO - +--- START KW: BuiltIn.Should Be Equal [ ${text} | ${mark} ]
+20160912 19:18:33.201 - DEBUG - Argument types are:
+<type 'unicode'>
+<type 'unicode'>
+20160912 19:18:33.201 - INFO - +--- END KW: BuiltIn.Should Be Equal (0)
+20160912 19:18:33.201 - INFO - +-- END KW: Check Location (15)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:33.201 - INFO - +-- START KW: Mark Location [ 2 | 1 ]
+20160912 19:18:33.217 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:33.217 - INFO - ${component} = Location21
+20160912 19:18:33.217 - INFO - +--- END KW: BuiltIn.Catenate (16)
+20160912 19:18:33.217 - INFO - +--- START KW: SwingLibrary.Click On Component [ ${component} ]
+20160912 19:18:33.217 - DEBUG - Jemmy: Waiting for "Location21" subcomponent
+20160912 19:18:33.217 - DEBUG - Jemmy: Start to wait action "Wait for "Location21" subcomponent to be displayed"
+20160912 19:18:33.217 - DEBUG - Jemmy: "Wait for "Location21" subcomponent to be displayed" action has been produced in 0 milliseconds with result 
+    : javax.swing.JButton[Location21,100,200,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=,defaultCapable=true]
+20160912 19:18:33.217 - INFO - +--- END KW: SwingLibrary.Click On Component (0)
+20160912 19:18:33.233 - INFO - +--- START KW: BuiltIn.Sleep [ 1s ]
+20160912 19:18:34.233 - INFO - Slept 1 second
+20160912 19:18:34.233 - INFO - +--- END KW: BuiltIn.Sleep (1000)
+20160912 19:18:34.233 - INFO - +-- END KW: Mark Location (1032)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:34.233 - INFO - +-- START KW: Check Location [ 2 | 1 | O ]
+20160912 19:18:34.248 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:34.248 - INFO - ${component} = Location21
+20160912 19:18:34.248 - INFO - +--- END KW: BuiltIn.Catenate (15)
+20160912 19:18:34.248 - INFO - +--- START KW: SwingLibrary.Get Button Text [ ${component} ]
+20160912 19:18:34.248 - DEBUG - Jemmy: Waiting for "Location21" subcomponent
+20160912 19:18:34.248 - DEBUG - Jemmy: Start to wait action "Wait for "Location21" subcomponent to be displayed"
+20160912 19:18:34.264 - DEBUG - Jemmy: "Wait for "Location21" subcomponent to be displayed" action has been produced in 16 milliseconds with result 
+    : javax.swing.JButton[Location21,100,200,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=O,defaultCapable=true]
+20160912 19:18:34.264 - INFO - ${text} = O
+20160912 19:18:34.264 - INFO - +--- END KW: SwingLibrary.Get Button Text (16)
+20160912 19:18:34.264 - INFO - +--- START KW: BuiltIn.Should Be Equal [ ${text} | ${mark} ]
+20160912 19:18:34.264 - DEBUG - Argument types are:
+<type 'unicode'>
+<type 'unicode'>
+20160912 19:18:34.264 - INFO - +--- END KW: BuiltIn.Should Be Equal (0)
+20160912 19:18:34.264 - INFO - +-- END KW: Check Location (31)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:34.264 - INFO - +-- START KW: Winner Should Be [ O ]
+20160912 19:18:34.279 - INFO - +--- START KW: SwingLibrary.Select Dialog [ Game Over ]
+20160912 19:18:34.279 - DEBUG - Jemmy: Start to wait dialog "Dialog with name or title 'Game Over'" opened
+20160912 19:18:34.279 - DEBUG - Jemmy: Dialog "Dialog with name or title 'Game Over'" has been opened in 0 milliseconds
+    javax.swing.JDialog[dialog1,549,325,268x119,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=Game Over,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,3,26,262x90,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+20160912 19:18:34.279 - INFO - +--- END KW: SwingLibrary.Select Dialog (0)
+20160912 19:18:34.279 - INFO - +--- START KW: BuiltIn.Catenate [ The winner is | ${winner} ]
+20160912 19:18:34.279 - INFO - ${message} = The winner is O
+20160912 19:18:34.279 - INFO - +--- END KW: BuiltIn.Catenate (0)
+20160912 19:18:34.295 - INFO - +--- START KW: SwingLibrary.Label Text Should Be [ OptionPane.label | ${message} ]
+20160912 19:18:34.295 - DEBUG - Jemmy: Waiting for "OptionPane.label" subcomponent
+20160912 19:18:34.295 - DEBUG - Jemmy: Start to wait action "Wait for "OptionPane.label" subcomponent to be displayed"
+20160912 19:18:34.295 - DEBUG - Jemmy: "Wait for "OptionPane.label" subcomponent to be displayed" action has been produced in 0 milliseconds with result 
+    : javax.swing.JLabel[OptionPane.label,0,8,195x16,alignmentX=0.0,alignmentY=0.0,border=,flags=8388608,maximumSize=,minimumSize=,preferredSize=,defaultIcon=,disabledIcon=,horizontalAlignment=LEADING,horizontalTextPosition=TRAILING,iconTextGap=4,labelFor=,text=The winner is O,verticalAlignment=CENTER,verticalTextPosition=CENTER]
+20160912 19:18:34.295 - INFO - +--- END KW: SwingLibrary.Label Text Should Be (0)
+20160912 19:18:34.295 - INFO - +--- START KW: SwingLibrary.Close Dialog [ Game Over ]
+20160912 19:18:34.295 - DEBUG - Jemmy: Start to wait dialog "Dialog with name or title 'Game Over'" opened
+20160912 19:18:34.295 - DEBUG - Jemmy: Dialog "Dialog with name or title 'Game Over'" has been opened in 0 milliseconds
+    javax.swing.JDialog[dialog1,549,325,268x119,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=Game Over,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,3,26,262x90,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+20160912 19:18:34.295 - DEBUG - Jemmy: Closing window
+    javax.swing.JDialog[dialog1,549,325,268x119,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=Game Over,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,3,26,262x90,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+20160912 19:18:34.311 - DEBUG - Jemmy: Wait window to be closed 
+    : javax.swing.JDialog[dialog1,549,325,268x119,hidden,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=Game Over,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,3,26,262x90,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+20160912 19:18:34.311 - INFO - +--- END KW: SwingLibrary.Close Dialog (16)
+20160912 19:18:34.311 - INFO - +--- START KW: SwingLibrary.Close Window [ Tic Tac Toe ]
+20160912 19:18:34.311 - DEBUG - Jemmy: Start to wait frame "Frame with name or title 'Tic Tac Toe'" opened
+20160912 19:18:34.311 - DEBUG - Jemmy: Frame "Frame with name or title 'Tic Tac Toe'" has been opened in 0 milliseconds
+    javax.swing.JFrame[frame1,0,0,316x339,invalid,layout=java.awt.BorderLayout,title=Tic Tac Toe,resizable,normal,defaultCloseOperation=EXIT_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,300x300,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+20160912 19:18:34.483 - INFO - +--- END KW: SwingLibrary.Close Window (172)
+20160912 19:18:34.483 - INFO - +-- END KW: Winner Should Be (219)
+------------------------------------------------------------------------------
+20160912 19:18:34.498 - INFO - +- END TEST: Win Horizontally as O (6657)
+------------------------------------------------------------------------------
+20160912 19:18:34.498 - INFO - +- START TEST: Force a Tie [ ]
+------------------------------------------------------------------------------
+20160912 19:18:34.498 - INFO - +-- START KW: Start New Game [ ]
+20160912 19:18:34.514 - INFO - +--- START KW: SwingLibrary.Start Application [ edu.jsu.mcis.TicTacToeVC ]
+20160912 19:18:34.529 - INFO - +--- END KW: SwingLibrary.Start Application (31)
+20160912 19:18:34.545 - INFO - +--- START KW: SwingLibrary.Select Window [ Tic Tac Toe ]
+20160912 19:18:34.545 - DEBUG - Jemmy: Start to wait frame "Frame with name or title 'Tic Tac Toe'" opened
+20160912 19:18:34.545 - DEBUG - Jemmy: Frame "Frame with name or title 'Tic Tac Toe'" has been opened in 0 milliseconds
+    javax.swing.JFrame[frame2,0,0,316x339,layout=java.awt.BorderLayout,title=Tic Tac Toe,resizable,normal,defaultCloseOperation=EXIT_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,300x300,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+20160912 19:18:34.561 - INFO - +--- END KW: SwingLibrary.Select Window (0)
+20160912 19:18:34.561 - INFO - +-- END KW: Start New Game (63)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:34.561 - INFO - +-- START KW: Mark Location [ 1 | 1 ]
+20160912 19:18:34.561 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:34.576 - INFO - ${component} = Location11
+20160912 19:18:34.576 - INFO - +--- END KW: BuiltIn.Catenate (15)
+20160912 19:18:34.576 - INFO - +--- START KW: SwingLibrary.Click On Component [ ${component} ]
+20160912 19:18:34.576 - DEBUG - Jemmy: Waiting for "Location11" subcomponent
+20160912 19:18:34.576 - DEBUG - Jemmy: Start to wait action "Wait for "Location11" subcomponent to be displayed"
+20160912 19:18:34.576 - DEBUG - Jemmy: "Wait for "Location11" subcomponent to be displayed" action has been produced in 0 milliseconds with result 
+    : javax.swing.JButton[Location11,100,100,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=,defaultCapable=true]
+20160912 19:18:34.592 - INFO - +--- END KW: SwingLibrary.Click On Component (16)
+20160912 19:18:34.592 - INFO - +--- START KW: BuiltIn.Sleep [ 1s ]
+20160912 19:18:35.592 - INFO - Slept 1 second
+20160912 19:18:35.592 - INFO - +--- END KW: BuiltIn.Sleep (1000)
+20160912 19:18:35.592 - INFO - +-- END KW: Mark Location (1031)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:35.592 - INFO - +-- START KW: Check Location [ 1 | 1 | X ]
+20160912 19:18:35.608 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:35.608 - INFO - ${component} = Location11
+20160912 19:18:35.608 - INFO - +--- END KW: BuiltIn.Catenate (16)
+20160912 19:18:35.608 - INFO - +--- START KW: SwingLibrary.Get Button Text [ ${component} ]
+20160912 19:18:35.623 - DEBUG - Jemmy: Waiting for "Location11" subcomponent
+20160912 19:18:35.623 - DEBUG - Jemmy: Start to wait action "Wait for "Location11" subcomponent to be displayed"
+20160912 19:18:35.623 - DEBUG - Jemmy: "Wait for "Location11" subcomponent to be displayed" action has been produced in 0 milliseconds with result 
+    : javax.swing.JButton[Location11,100,100,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=X,defaultCapable=true]
+20160912 19:18:35.623 - INFO - ${text} = X
+20160912 19:18:35.623 - INFO - +--- END KW: SwingLibrary.Get Button Text (15)
+20160912 19:18:35.623 - INFO - +--- START KW: BuiltIn.Should Be Equal [ ${text} | ${mark} ]
+20160912 19:18:35.639 - DEBUG - Argument types are:
+<type 'unicode'>
+<type 'unicode'>
+20160912 19:18:35.639 - INFO - +--- END KW: BuiltIn.Should Be Equal (16)
+20160912 19:18:35.639 - INFO - +-- END KW: Check Location (47)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:35.639 - INFO - +-- START KW: Mark Location [ 0 | 0 ]
+20160912 19:18:35.639 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:35.639 - INFO - ${component} = Location00
+20160912 19:18:35.639 - INFO - +--- END KW: BuiltIn.Catenate (0)
+20160912 19:18:35.639 - INFO - +--- START KW: SwingLibrary.Click On Component [ ${component} ]
+20160912 19:18:35.655 - DEBUG - Jemmy: Waiting for "Location00" subcomponent
+20160912 19:18:35.655 - DEBUG - Jemmy: Start to wait action "Wait for "Location00" subcomponent to be displayed"
+20160912 19:18:35.655 - DEBUG - Jemmy: "Wait for "Location00" subcomponent to be displayed" action has been produced in 0 milliseconds with result 
+    : javax.swing.JButton[Location00,0,0,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=,defaultCapable=true]
+20160912 19:18:35.655 - INFO - +--- END KW: SwingLibrary.Click On Component (16)
+20160912 19:18:35.655 - INFO - +--- START KW: BuiltIn.Sleep [ 1s ]
+20160912 19:18:36.655 - INFO - Slept 1 second
+20160912 19:18:36.655 - INFO - +--- END KW: BuiltIn.Sleep (1000)
+20160912 19:18:36.655 - INFO - +-- END KW: Mark Location (1016)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:36.655 - INFO - +-- START KW: Check Location [ 0 | 0 | O ]
+20160912 19:18:36.655 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:36.670 - INFO - ${component} = Location00
+20160912 19:18:36.670 - INFO - +--- END KW: BuiltIn.Catenate (15)
+20160912 19:18:36.670 - INFO - +--- START KW: SwingLibrary.Get Button Text [ ${component} ]
+20160912 19:18:36.686 - DEBUG - Jemmy: Waiting for "Location00" subcomponent
+20160912 19:18:36.686 - DEBUG - Jemmy: Start to wait action "Wait for "Location00" subcomponent to be displayed"
+20160912 19:18:36.686 - DEBUG - Jemmy: "Wait for "Location00" subcomponent to be displayed" action has been produced in 0 milliseconds with result 
+    : javax.swing.JButton[Location00,0,0,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=O,defaultCapable=true]
+20160912 19:18:36.686 - INFO - ${text} = O
+20160912 19:18:36.686 - INFO - +--- END KW: SwingLibrary.Get Button Text (16)
+20160912 19:18:36.686 - INFO - +--- START KW: BuiltIn.Should Be Equal [ ${text} | ${mark} ]
+20160912 19:18:36.686 - DEBUG - Argument types are:
+<type 'unicode'>
+<type 'unicode'>
+20160912 19:18:36.701 - INFO - +--- END KW: BuiltIn.Should Be Equal (15)
+20160912 19:18:36.701 - INFO - +-- END KW: Check Location (46)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:36.701 - INFO - +-- START KW: Mark Location [ 2 | 0 ]
+20160912 19:18:36.701 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:36.701 - INFO - ${component} = Location20
+20160912 19:18:36.717 - INFO - +--- END KW: BuiltIn.Catenate (16)
+20160912 19:18:36.717 - INFO - +--- START KW: SwingLibrary.Click On Component [ ${component} ]
+20160912 19:18:36.717 - DEBUG - Jemmy: Waiting for "Location20" subcomponent
+20160912 19:18:36.717 - DEBUG - Jemmy: Start to wait action "Wait for "Location20" subcomponent to be displayed"
+20160912 19:18:36.717 - DEBUG - Jemmy: "Wait for "Location20" subcomponent to be displayed" action has been produced in 0 milliseconds with result 
+    : javax.swing.JButton[Location20,0,200,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=,defaultCapable=true]
+20160912 19:18:36.717 - INFO - +--- END KW: SwingLibrary.Click On Component (0)
+20160912 19:18:36.733 - INFO - +--- START KW: BuiltIn.Sleep [ 1s ]
+20160912 19:18:37.733 - INFO - Slept 1 second
+20160912 19:18:37.733 - INFO - +--- END KW: BuiltIn.Sleep (1016)
+20160912 19:18:37.733 - INFO - +-- END KW: Mark Location (1032)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:37.733 - INFO - +-- START KW: Check Location [ 2 | 0 | X ]
+20160912 19:18:37.748 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:37.748 - INFO - ${component} = Location20
+20160912 19:18:37.748 - INFO - +--- END KW: BuiltIn.Catenate (15)
+20160912 19:18:37.748 - INFO - +--- START KW: SwingLibrary.Get Button Text [ ${component} ]
+20160912 19:18:37.748 - DEBUG - Jemmy: Waiting for "Location20" subcomponent
+20160912 19:18:37.748 - DEBUG - Jemmy: Start to wait action "Wait for "Location20" subcomponent to be displayed"
+20160912 19:18:37.764 - DEBUG - Jemmy: "Wait for "Location20" subcomponent to be displayed" action has been produced in 16 milliseconds with result 
+    : javax.swing.JButton[Location20,0,200,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=X,defaultCapable=true]
+20160912 19:18:37.764 - INFO - ${text} = X
+20160912 19:18:37.764 - INFO - +--- END KW: SwingLibrary.Get Button Text (16)
+20160912 19:18:37.764 - INFO - +--- START KW: BuiltIn.Should Be Equal [ ${text} | ${mark} ]
+20160912 19:18:37.764 - DEBUG - Argument types are:
+<type 'unicode'>
+<type 'unicode'>
+20160912 19:18:37.764 - INFO - +--- END KW: BuiltIn.Should Be Equal (0)
+20160912 19:18:37.764 - INFO - +-- END KW: Check Location (31)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:37.764 - INFO - +-- START KW: Mark Location [ 0 | 2 ]
+20160912 19:18:37.780 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:37.780 - INFO - ${component} = Location02
+20160912 19:18:37.780 - INFO - +--- END KW: BuiltIn.Catenate (0)
+20160912 19:18:37.780 - INFO - +--- START KW: SwingLibrary.Click On Component [ ${component} ]
+20160912 19:18:37.780 - DEBUG - Jemmy: Waiting for "Location02" subcomponent
+20160912 19:18:37.780 - DEBUG - Jemmy: Start to wait action "Wait for "Location02" subcomponent to be displayed"
+20160912 19:18:37.780 - DEBUG - Jemmy: "Wait for "Location02" subcomponent to be displayed" action has been produced in 0 milliseconds with result 
+    : javax.swing.JButton[Location02,200,0,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=,defaultCapable=true]
+20160912 19:18:37.795 - INFO - +--- END KW: SwingLibrary.Click On Component (15)
+20160912 19:18:37.795 - INFO - +--- START KW: BuiltIn.Sleep [ 1s ]
+20160912 19:18:38.795 - INFO - Slept 1 second
+20160912 19:18:38.795 - INFO - +--- END KW: BuiltIn.Sleep (1000)
+20160912 19:18:38.795 - INFO - +-- END KW: Mark Location (1031)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:38.795 - INFO - +-- START KW: Check Location [ 0 | 2 | O ]
+20160912 19:18:38.811 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:38.811 - INFO - ${component} = Location02
+20160912 19:18:38.811 - INFO - +--- END KW: BuiltIn.Catenate (16)
+20160912 19:18:38.811 - INFO - +--- START KW: SwingLibrary.Get Button Text [ ${component} ]
+20160912 19:18:38.811 - DEBUG - Jemmy: Waiting for "Location02" subcomponent
+20160912 19:18:38.811 - DEBUG - Jemmy: Start to wait action "Wait for "Location02" subcomponent to be displayed"
+20160912 19:18:38.827 - DEBUG - Jemmy: "Wait for "Location02" subcomponent to be displayed" action has been produced in 0 milliseconds with result 
+    : javax.swing.JButton[Location02,200,0,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=O,defaultCapable=true]
+20160912 19:18:38.827 - INFO - ${text} = O
+20160912 19:18:38.827 - INFO - +--- END KW: SwingLibrary.Get Button Text (16)
+20160912 19:18:38.827 - INFO - +--- START KW: BuiltIn.Should Be Equal [ ${text} | ${mark} ]
+20160912 19:18:38.827 - DEBUG - Argument types are:
+<type 'unicode'>
+<type 'unicode'>
+20160912 19:18:38.827 - INFO - +--- END KW: BuiltIn.Should Be Equal (0)
+20160912 19:18:38.827 - INFO - +-- END KW: Check Location (32)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:38.827 - INFO - +-- START KW: Mark Location [ 0 | 1 ]
+20160912 19:18:38.842 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:38.842 - INFO - ${component} = Location01
+20160912 19:18:38.842 - INFO - +--- END KW: BuiltIn.Catenate (15)
+20160912 19:18:38.842 - INFO - +--- START KW: SwingLibrary.Click On Component [ ${component} ]
+20160912 19:18:38.842 - DEBUG - Jemmy: Waiting for "Location01" subcomponent
+20160912 19:18:38.842 - DEBUG - Jemmy: Start to wait action "Wait for "Location01" subcomponent to be displayed"
+20160912 19:18:38.842 - DEBUG - Jemmy: "Wait for "Location01" subcomponent to be displayed" action has been produced in 0 milliseconds with result 
+    : javax.swing.JButton[Location01,100,0,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=,defaultCapable=true]
+20160912 19:18:38.858 - INFO - +--- END KW: SwingLibrary.Click On Component (16)
+20160912 19:18:38.858 - INFO - +--- START KW: BuiltIn.Sleep [ 1s ]
+20160912 19:18:39.858 - INFO - Slept 1 second
+20160912 19:18:39.858 - INFO - +--- END KW: BuiltIn.Sleep (1000)
+20160912 19:18:39.858 - INFO - +-- END KW: Mark Location (1031)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:39.858 - INFO - +-- START KW: Check Location [ 0 | 1 | X ]
+20160912 19:18:39.874 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:39.874 - INFO - ${component} = Location01
+20160912 19:18:39.874 - INFO - +--- END KW: BuiltIn.Catenate (16)
+20160912 19:18:39.874 - INFO - +--- START KW: SwingLibrary.Get Button Text [ ${component} ]
+20160912 19:18:39.874 - DEBUG - Jemmy: Waiting for "Location01" subcomponent
+20160912 19:18:39.874 - DEBUG - Jemmy: Start to wait action "Wait for "Location01" subcomponent to be displayed"
+20160912 19:18:39.890 - DEBUG - Jemmy: "Wait for "Location01" subcomponent to be displayed" action has been produced in 16 milliseconds with result 
+    : javax.swing.JButton[Location01,100,0,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=X,defaultCapable=true]
+20160912 19:18:39.890 - INFO - ${text} = X
+20160912 19:18:39.890 - INFO - +--- END KW: SwingLibrary.Get Button Text (16)
+20160912 19:18:39.890 - INFO - +--- START KW: BuiltIn.Should Be Equal [ ${text} | ${mark} ]
+20160912 19:18:39.890 - DEBUG - Argument types are:
+<type 'unicode'>
+<type 'unicode'>
+20160912 19:18:39.905 - INFO - +--- END KW: BuiltIn.Should Be Equal (15)
+20160912 19:18:39.905 - INFO - +-- END KW: Check Location (47)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:39.905 - INFO - +-- START KW: Mark Location [ 2 | 1 ]
+20160912 19:18:39.905 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:39.921 - INFO - ${component} = Location21
+20160912 19:18:39.921 - INFO - +--- END KW: BuiltIn.Catenate (16)
+20160912 19:18:39.921 - INFO - +--- START KW: SwingLibrary.Click On Component [ ${component} ]
+20160912 19:18:39.921 - DEBUG - Jemmy: Waiting for "Location21" subcomponent
+20160912 19:18:39.921 - DEBUG - Jemmy: Start to wait action "Wait for "Location21" subcomponent to be displayed"
+20160912 19:18:39.921 - DEBUG - Jemmy: "Wait for "Location21" subcomponent to be displayed" action has been produced in 0 milliseconds with result 
+    : javax.swing.JButton[Location21,100,200,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=,defaultCapable=true]
+20160912 19:18:39.936 - INFO - +--- END KW: SwingLibrary.Click On Component (15)
+20160912 19:18:39.936 - INFO - +--- START KW: BuiltIn.Sleep [ 1s ]
+20160912 19:18:40.936 - INFO - Slept 1 second
+20160912 19:18:40.937 - INFO - +--- END KW: BuiltIn.Sleep (1001)
+20160912 19:18:40.937 - INFO - +-- END KW: Mark Location (1032)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:40.937 - INFO - +-- START KW: Check Location [ 2 | 1 | O ]
+20160912 19:18:40.953 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:40.953 - INFO - ${component} = Location21
+20160912 19:18:40.953 - INFO - +--- END KW: BuiltIn.Catenate (16)
+20160912 19:18:40.953 - INFO - +--- START KW: SwingLibrary.Get Button Text [ ${component} ]
+20160912 19:18:40.953 - DEBUG - Jemmy: Waiting for "Location21" subcomponent
+20160912 19:18:40.953 - DEBUG - Jemmy: Start to wait action "Wait for "Location21" subcomponent to be displayed"
+20160912 19:18:40.968 - DEBUG - Jemmy: "Wait for "Location21" subcomponent to be displayed" action has been produced in 15 milliseconds with result 
+    : javax.swing.JButton[Location21,100,200,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=O,defaultCapable=true]
+20160912 19:18:40.968 - INFO - ${text} = O
+20160912 19:18:40.968 - INFO - +--- END KW: SwingLibrary.Get Button Text (15)
+20160912 19:18:40.968 - INFO - +--- START KW: BuiltIn.Should Be Equal [ ${text} | ${mark} ]
+20160912 19:18:40.968 - DEBUG - Argument types are:
+<type 'unicode'>
+<type 'unicode'>
+20160912 19:18:40.984 - INFO - +--- END KW: BuiltIn.Should Be Equal (16)
+20160912 19:18:40.984 - INFO - +-- END KW: Check Location (47)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:40.984 - INFO - +-- START KW: Mark Location [ 1 | 2 ]
+20160912 19:18:40.984 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:40.984 - INFO - ${component} = Location12
+20160912 19:18:40.984 - INFO - +--- END KW: BuiltIn.Catenate (0)
+20160912 19:18:40.984 - INFO - +--- START KW: SwingLibrary.Click On Component [ ${component} ]
+20160912 19:18:40.984 - DEBUG - Jemmy: Waiting for "Location12" subcomponent
+20160912 19:18:40.984 - DEBUG - Jemmy: Start to wait action "Wait for "Location12" subcomponent to be displayed"
+20160912 19:18:41.000 - DEBUG - Jemmy: "Wait for "Location12" subcomponent to be displayed" action has been produced in 16 milliseconds with result 
+    : javax.swing.JButton[Location12,200,100,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=,defaultCapable=true]
+20160912 19:18:41.000 - INFO - +--- END KW: SwingLibrary.Click On Component (16)
+20160912 19:18:41.000 - INFO - +--- START KW: BuiltIn.Sleep [ 1s ]
+20160912 19:18:42.000 - INFO - Slept 1 second
+20160912 19:18:42.000 - INFO - +--- END KW: BuiltIn.Sleep (1000)
+20160912 19:18:42.000 - INFO - +-- END KW: Mark Location (1016)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:42.000 - INFO - +-- START KW: Check Location [ 1 | 2 | X ]
+20160912 19:18:42.015 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:42.015 - INFO - ${component} = Location12
+20160912 19:18:42.015 - INFO - +--- END KW: BuiltIn.Catenate (0)
+20160912 19:18:42.015 - INFO - +--- START KW: SwingLibrary.Get Button Text [ ${component} ]
+20160912 19:18:42.015 - DEBUG - Jemmy: Waiting for "Location12" subcomponent
+20160912 19:18:42.015 - DEBUG - Jemmy: Start to wait action "Wait for "Location12" subcomponent to be displayed"
+20160912 19:18:42.031 - DEBUG - Jemmy: "Wait for "Location12" subcomponent to be displayed" action has been produced in 16 milliseconds with result 
+    : javax.swing.JButton[Location12,200,100,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=X,defaultCapable=true]
+20160912 19:18:42.031 - INFO - ${text} = X
+20160912 19:18:42.031 - INFO - +--- END KW: SwingLibrary.Get Button Text (16)
+20160912 19:18:42.031 - INFO - +--- START KW: BuiltIn.Should Be Equal [ ${text} | ${mark} ]
+20160912 19:18:42.031 - DEBUG - Argument types are:
+<type 'unicode'>
+<type 'unicode'>
+20160912 19:18:42.031 - INFO - +--- END KW: BuiltIn.Should Be Equal (0)
+20160912 19:18:42.031 - INFO - +-- END KW: Check Location (31)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:42.031 - INFO - +-- START KW: Mark Location [ 1 | 0 ]
+20160912 19:18:42.046 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:42.062 - INFO - ${component} = Location10
+20160912 19:18:42.062 - INFO - +--- END KW: BuiltIn.Catenate (16)
+20160912 19:18:42.062 - INFO - +--- START KW: SwingLibrary.Click On Component [ ${component} ]
+20160912 19:18:42.062 - DEBUG - Jemmy: Waiting for "Location10" subcomponent
+20160912 19:18:42.062 - DEBUG - Jemmy: Start to wait action "Wait for "Location10" subcomponent to be displayed"
+20160912 19:18:42.062 - DEBUG - Jemmy: "Wait for "Location10" subcomponent to be displayed" action has been produced in 0 milliseconds with result 
+    : javax.swing.JButton[Location10,0,100,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=,defaultCapable=true]
+20160912 19:18:42.062 - INFO - +--- END KW: SwingLibrary.Click On Component (0)
+20160912 19:18:42.078 - INFO - +--- START KW: BuiltIn.Sleep [ 1s ]
+20160912 19:18:43.078 - INFO - Slept 1 second
+20160912 19:18:43.078 - INFO - +--- END KW: BuiltIn.Sleep (1000)
+20160912 19:18:43.078 - INFO - +-- END KW: Mark Location (1047)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:43.078 - INFO - +-- START KW: Check Location [ 1 | 0 | O ]
+20160912 19:18:43.093 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:43.093 - INFO - ${component} = Location10
+20160912 19:18:43.093 - INFO - +--- END KW: BuiltIn.Catenate (15)
+20160912 19:18:43.093 - INFO - +--- START KW: SwingLibrary.Get Button Text [ ${component} ]
+20160912 19:18:43.093 - DEBUG - Jemmy: Waiting for "Location10" subcomponent
+20160912 19:18:43.093 - DEBUG - Jemmy: Start to wait action "Wait for "Location10" subcomponent to be displayed"
+20160912 19:18:43.093 - DEBUG - Jemmy: "Wait for "Location10" subcomponent to be displayed" action has been produced in 0 milliseconds with result 
+    : javax.swing.JButton[Location10,0,100,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=O,defaultCapable=true]
+20160912 19:18:43.093 - INFO - ${text} = O
+20160912 19:18:43.093 - INFO - +--- END KW: SwingLibrary.Get Button Text (0)
+20160912 19:18:43.109 - INFO - +--- START KW: BuiltIn.Should Be Equal [ ${text} | ${mark} ]
+20160912 19:18:43.109 - DEBUG - Argument types are:
+<type 'unicode'>
+<type 'unicode'>
+20160912 19:18:43.109 - INFO - +--- END KW: BuiltIn.Should Be Equal (0)
+20160912 19:18:43.109 - INFO - +-- END KW: Check Location (31)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:43.109 - INFO - +-- START KW: Mark Location [ 2 | 2 ]
+20160912 19:18:43.109 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:43.109 - INFO - ${component} = Location22
+20160912 19:18:43.109 - INFO - +--- END KW: BuiltIn.Catenate (0)
+20160912 19:18:43.109 - INFO - +--- START KW: SwingLibrary.Click On Component [ ${component} ]
+20160912 19:18:43.125 - DEBUG - Jemmy: Waiting for "Location22" subcomponent
+20160912 19:18:43.125 - DEBUG - Jemmy: Start to wait action "Wait for "Location22" subcomponent to be displayed"
+20160912 19:18:43.125 - DEBUG - Jemmy: "Wait for "Location22" subcomponent to be displayed" action has been produced in 0 milliseconds with result 
+    : javax.swing.JButton[Location22,200,200,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=,defaultCapable=true]
+20160912 19:18:43.125 - INFO - +--- END KW: SwingLibrary.Click On Component (16)
+20160912 19:18:43.125 - INFO - +--- START KW: BuiltIn.Sleep [ 1s ]
+20160912 19:18:44.125 - INFO - Slept 1 second
+20160912 19:18:44.125 - INFO - +--- END KW: BuiltIn.Sleep (1000)
+20160912 19:18:44.125 - INFO - +-- END KW: Mark Location (1016)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:44.125 - INFO - +-- START KW: Check Location [ 2 | 2 | X ]
+20160912 19:18:44.140 - INFO - +--- START KW: BuiltIn.Catenate [ SEPARATOR= | Location | ${row} | ${col} ]
+20160912 19:18:44.144 - INFO - ${component} = Location22
+20160912 19:18:44.144 - INFO - +--- END KW: BuiltIn.Catenate (19)
+20160912 19:18:44.148 - INFO - +--- START KW: SwingLibrary.Get Button Text [ ${component} ]
+20160912 19:18:44.152 - DEBUG - Jemmy: Waiting for "Location22" subcomponent
+20160912 19:18:44.152 - DEBUG - Jemmy: Start to wait action "Wait for "Location22" subcomponent to be displayed"
+20160912 19:18:44.152 - DEBUG - Jemmy: "Wait for "Location22" subcomponent to be displayed" action has been produced in 0 milliseconds with result 
+    : javax.swing.JButton[Location22,200,200,100x100,alignmentX=0.0,alignmentY=0.5,border=javax.swing.plaf.BorderUIResource$CompoundBorderUIResource@beef49,flags=296,maximumSize=,minimumSize=,preferredSize=java.awt.Dimension[width=100,height=100],defaultIcon=,disabledIcon=,disabledSelectedIcon=,margin=javax.swing.plaf.InsetsUIResource[top=2,left=14,bottom=2,right=14],paintBorder=true,paintFocus=true,pressedIcon=,rolloverEnabled=true,rolloverIcon=,rolloverSelectedIcon=,selectedIcon=,text=X,defaultCapable=true]
+20160912 19:18:44.152 - INFO - ${text} = X
+20160912 19:18:44.152 - INFO - +--- END KW: SwingLibrary.Get Button Text (4)
+20160912 19:18:44.152 - INFO - +--- START KW: BuiltIn.Should Be Equal [ ${text} | ${mark} ]
+20160912 19:18:44.152 - DEBUG - Argument types are:
+<type 'unicode'>
+<type 'unicode'>
+20160912 19:18:44.152 - INFO - +--- END KW: BuiltIn.Should Be Equal (0)
+20160912 19:18:44.152 - INFO - +-- END KW: Check Location (27)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20160912 19:18:44.152 - INFO - +-- START KW: Winner Should Be [ TIE ]
+20160912 19:18:44.168 - INFO - +--- START KW: SwingLibrary.Select Dialog [ Game Over ]
+20160912 19:18:44.168 - DEBUG - Jemmy: Start to wait dialog "Dialog with name or title 'Game Over'" opened
+20160912 19:18:44.168 - DEBUG - Jemmy: Dialog "Dialog with name or title 'Game Over'" has been opened in 0 milliseconds
+    javax.swing.JDialog[dialog2,549,325,268x119,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=Game Over,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,3,26,262x90,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+20160912 19:18:44.168 - INFO - +--- END KW: SwingLibrary.Select Dialog (0)
+20160912 19:18:44.168 - INFO - +--- START KW: BuiltIn.Catenate [ The winner is | ${winner} ]
+20160912 19:18:44.168 - INFO - ${message} = The winner is TIE
+20160912 19:18:44.168 - INFO - +--- END KW: BuiltIn.Catenate (0)
+20160912 19:18:44.168 - INFO - +--- START KW: SwingLibrary.Label Text Should Be [ OptionPane.label | ${message} ]
+20160912 19:18:44.184 - DEBUG - Jemmy: Waiting for "OptionPane.label" subcomponent
+20160912 19:18:44.184 - DEBUG - Jemmy: Start to wait action "Wait for "OptionPane.label" subcomponent to be displayed"
+20160912 19:18:44.184 - DEBUG - Jemmy: "Wait for "OptionPane.label" subcomponent to be displayed" action has been produced in 0 milliseconds with result 
+    : javax.swing.JLabel[OptionPane.label,0,8,195x16,alignmentX=0.0,alignmentY=0.0,border=,flags=8388608,maximumSize=,minimumSize=,preferredSize=,defaultIcon=,disabledIcon=,horizontalAlignment=LEADING,horizontalTextPosition=TRAILING,iconTextGap=4,labelFor=,text=The winner is TIE,verticalAlignment=CENTER,verticalTextPosition=CENTER]
+20160912 19:18:44.184 - INFO - +--- END KW: SwingLibrary.Label Text Should Be (16)
+20160912 19:18:44.184 - INFO - +--- START KW: SwingLibrary.Close Dialog [ Game Over ]
+20160912 19:18:44.184 - DEBUG - Jemmy: Start to wait dialog "Dialog with name or title 'Game Over'" opened
+20160912 19:18:44.184 - DEBUG - Jemmy: Dialog "Dialog with name or title 'Game Over'" has been opened in 0 milliseconds
+    javax.swing.JDialog[dialog2,549,325,268x119,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=Game Over,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,3,26,262x90,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+20160912 19:18:44.184 - DEBUG - Jemmy: Closing window
+    javax.swing.JDialog[dialog2,549,325,268x119,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=Game Over,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,3,26,262x90,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+20160912 19:18:44.184 - DEBUG - Jemmy: Wait window to be closed 
+    : javax.swing.JDialog[dialog2,549,325,268x119,hidden,layout=java.awt.BorderLayout,APPLICATION_MODAL,title=Game Over,defaultCloseOperation=HIDE_ON_CLOSE,rootPane=javax.swing.JRootPane[,3,26,262x90,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+20160912 19:18:44.184 - INFO - +--- END KW: SwingLibrary.Close Dialog (0)
+20160912 19:18:44.199 - INFO - +--- START KW: SwingLibrary.Close Window [ Tic Tac Toe ]
+20160912 19:18:44.199 - DEBUG - Jemmy: Start to wait frame "Frame with name or title 'Tic Tac Toe'" opened
+20160912 19:18:44.199 - DEBUG - Jemmy: Frame "Frame with name or title 'Tic Tac Toe'" has been opened in 0 milliseconds
+    javax.swing.JFrame[frame2,0,0,316x339,invalid,layout=java.awt.BorderLayout,title=Tic Tac Toe,resizable,normal,defaultCloseOperation=EXIT_ON_CLOSE,rootPane=javax.swing.JRootPane[,8,31,300x300,layout=javax.swing.JRootPane$RootLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=16777673,maximumSize=,minimumSize=,preferredSize=],rootPaneCheckingEnabled=true]
+20160912 19:18:44.371 - INFO - +--- END KW: SwingLibrary.Close Window (172)
+20160912 19:18:44.371 - INFO - +-- END KW: Winner Should Be (219)
+------------------------------------------------------------------------------
+20160912 19:18:44.371 - INFO - +- END TEST: Force a Tie (9873)
+------------------------------------------------------------------------------
+20160912 19:18:44.418 - INFO - + END SUITE: TicTacToeGUITest (23922)
+==============================================================================

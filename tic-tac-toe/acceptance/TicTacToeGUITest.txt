@@ -3,22 +3,24 @@ Library           SwingLibrary
 
 *** User Keywords ***
 Start New Game
-    Start Application   edu.jsu.mcis.TicTacToeGame
+    Start Application   edu.jsu.mcis.TicTacToeVC
     Select Window       Tic Tac Toe
 
 Mark Location   [Arguments]     ${row}      ${col}
     ${component}=   Catenate    SEPARATOR=  Location    ${row}  ${col}
     Click On Component  ${component}
+	Sleep  1s
 
 Check Location  [Arguments]     ${row}  ${col}  ${mark}
     ${component}=   Catenate    SEPARATOR=  Location    ${row}  ${col}
-    Label Text Should Be    ${component}    ${mark}
+	${text}=   Get Button Text  ${component}
+    Should Be Equal    ${text}    ${mark}
     
 Winner Should Be    [Arguments]     ${winner}
     Select Dialog   Game Over
     ${message}=     Catenate    The winner is   ${winner}
     Label Text Should Be    OptionPane.label    ${message}
-    Close Dialog    Game Over
+	Close Dialog    Game Over
     Close Window    Tic Tac Toe
     
     
