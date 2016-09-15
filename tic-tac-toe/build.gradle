@@ -14,9 +14,9 @@ sourceCompatibility = 1.7
 version = '1.0'
 jar {
     manifest {
-        attributes 'Implementation-Title': 'Guess My Number', 
+        attributes 'Implementation-Title': 'Tic Tac Toe', 
                    'Implementation-Version': version, 
-                   'Main-Class': 'edu.jsu.mcis.GuessMyNumber'
+                   'Main-Class': 'edu.jsu.mcis.TicTacToeVC'
     }
 }
 
