@@ -1,3 +1,12 @@
+buildscript {
+    dependencies {
+		classpath group: 'org.robotframework', name: 'swinglibrary', version: '1.9.6'
+        classpath files(mkdir('build/classes/main'))
+    }
+}
+plugins {
+  id 'org.roboscratch.robot' version '0.1.1'
+}
 apply plugin: 'java'
 apply plugin: 'jacoco'
 
@@ -5,9 +14,9 @@ sourceCompatibility = 1.7
 version = '1.0'
 jar {
     manifest {
-        attributes 'Implementation-Title': 'Tic Tac Toe VC', 
+        attributes 'Implementation-Title': 'Guess My Number', 
                    'Implementation-Version': version, 
-                   'Main-Class': 'edu.jsu.mcis.TicTacToeVC'
+                   'Main-Class': 'edu.jsu.mcis.GuessMyNumber'
     }
 }
 
@@ -16,9 +25,7 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'junit', 
-                name: 'junit', 
-                version: '4.+'
+    testCompile 'junit:junit:4.12'
 }
 
 jacocoTestReport {
@@ -27,20 +34,5 @@ jacocoTestReport {
     additionalSourceDirs = files(sourceSets.main.allJava.srcDirs)
 }
 
-test {
-    systemProperties 'property': 'value'
-}
+runrobot.dependsOn build
 
-uploadArchives {
-    repositories {
-       flatDir {
-           dirs 'repos'
-       }
-    }
-}
-
-if(hasProperty("Xlint:unchecked")) {
-    tasks.withType(JavaCompile) { 
-        options.compilerArgs << "-Xlint:unchecked" 
-    }
-}

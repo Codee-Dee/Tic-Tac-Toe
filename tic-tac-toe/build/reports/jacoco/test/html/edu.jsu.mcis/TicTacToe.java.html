@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>TicTacToe.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">tic-tac-toe</a> &gt; <a href="index.source.html" class="el_package">edu.jsu.mcis</a> &gt; <span class="el_source">TicTacToe.java</span></div><h1>TicTacToe.java</h1><pre class="source lang-java linenums">package edu.jsu.mcis;
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TicTacToe.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">tic-tac-toe</a> &gt; <a href="index.source.html" class="el_package">edu.jsu.mcis</a> &gt; <span class="el_source">TicTacToe.java</span></div><h1>TicTacToe.java</h1><pre class="source lang-java linenums">package edu.jsu.mcis;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -7,104 +7,85 @@ import java.util.Scanner;
 	
 <span class="fc" id="L8">	private char [][] board = new char [3][3];</span>
 <span class="fc" id="L9">	private char player = 'O';</span>
-<span class="fc" id="L10">	private String winner = &quot; &quot;;</span>
-<span class="fc" id="L11">	private boolean ongoingGame = false;</span>
 	
-	public  boolean setNewBoard(){
-<span class="fc" id="L14">        boolean newBoard = false;</span>
-<span class="fc bfc" id="L15" title="All 2 branches covered.">        for (int row = 0; row &lt; board.length;row++){</span>
-<span class="fc" id="L16">            Arrays.fill(board[row], ' ');</span>
-            
-<span class="pc bpc" id="L18" title="3 of 6 branches missed.">            if (board[row][0] == board[row][1] &amp;&amp; board[row][1] == board[row][2] &amp;&amp; board[row][2] == ' '){</span>
-<span class="fc" id="L19">                newBoard = true;</span>
-            }
-            else{ 
-<span class="nc" id="L22">                newBoard = false;</span>
-            }
-        }
-<span class="fc" id="L25">        return newBoard;</span>
-    }
-	public char setPlayer(){
-<span class="fc bfc" id="L28" title="All 2 branches covered.">		if (player == 'O'){</span>
-<span class="fc" id="L29">			player = 'X';</span>
+	public  void setNewBoard(){
+<span class="fc bfc" id="L12" title="All 2 branches covered.">        for (int row = 0; row &lt; board.length;row++){</span>
+<span class="fc" id="L13">            Arrays.fill(board[row], ' ');</span>
+		}
+<span class="fc" id="L15">	}</span>
+	private char setPlayer(){
+<span class="fc bfc" id="L17" title="All 2 branches covered.">		if (player == 'O'){</span>
+<span class="fc" id="L18">			player = 'X';</span>
 		}
 		else 
-<span class="fc" id="L32">			player = 'O';</span>
-<span class="fc" id="L33">		return player;</span>
-	}
-	public boolean ongoingGame(){
-<span class="fc" id="L36">		ongoingGame = true;</span>
-<span class="fc" id="L37">		return ongoingGame;</span>
+<span class="fc" id="L21">			player = 'O';</span>
+<span class="fc" id="L22">		return player;</span>
 	}
 	
 	public void setMove(int row, int column){
-<span class="pc bpc" id="L41" title="4 of 8 branches missed.">		if (row &gt;= 0 &amp;&amp; row &lt;= 2 &amp;&amp; column &gt;= 0 &amp;&amp; column &lt;= 2){</span>
-<span class="fc bfc" id="L42" title="All 2 branches covered.">			if (board[row][column] == ' '){</span>
-<span class="fc" id="L43">				board[row][column] = player;</span>
+<span class="pc bpc" id="L26" title="4 of 8 branches missed.">		if (row &gt;= 0 &amp;&amp; row &lt;= 2 &amp;&amp; column &gt;= 0 &amp;&amp; column &lt;= 2){</span>
+<span class="fc bfc" id="L27" title="All 2 branches covered.">			if (board[row][column] == ' '){</span>
+<span class="fc" id="L28">				setPlayer();</span>
+<span class="fc" id="L29">				board[row][column] = player;</span>
 			}
 		}
-<span class="fc" id="L46">	}</span>
+<span class="fc" id="L32">	}</span>
 	
 	public String getMove(int row, int column){
-<span class="fc" id="L49">		String move = Character.toString(board[row][column]);</span>
-<span class="fc" id="L50">        return move;</span>
+<span class="fc" id="L35">		String move = String.valueOf(board[row][column]);</span>
+<span class="fc" id="L36">        return move;</span>
 	}
 	
-	public boolean checkForValidMove(int row, int column){
-<span class="fc" id="L54">		boolean valid = false;</span>
-
-<span class="pc bpc" id="L56" title="6 of 10 branches missed.">		if (row &lt; 0 || row &gt; 2 &amp;&amp; column &lt; 0 || column &gt; 2 || board[row][column] !=' '){</span>
-<span class="fc" id="L57">			valid = true;</span>
-<span class="fc" id="L58">			return valid;</span>
+	private String checkForHorizontalWin(){
+<span class="fc bfc" id="L40" title="All 2 branches covered.">		for (int i = 0; i &lt; board.length; i++){</span>
+<span class="fc bfc" id="L41" title="All 6 branches covered.">			if (board[i][0] == board[i][1] &amp;&amp; board[i][1] == board[i][2] &amp;&amp; board[i][0] != ' '){</span>
+<span class="fc" id="L42">				return Character.toString(board[i][0]);</span>
+			}
 		}
-<span class="nc" id="L60">		return valid;</span>
+<span class="fc" id="L45">		return &quot; &quot;;</span>
 	}
 	
-	public void checkForHorizontalWin(){
-<span class="fc bfc" id="L64" title="All 2 branches covered.">		for (int i = 0; i &lt; board.length; i++){</span>
-<span class="pc bpc" id="L65" title="2 of 6 branches missed.">			if (board[i][0] == board[i][1] &amp;&amp; board[i][1] == board[i][2] &amp;&amp; board[i][0] != ' '){</span>
-<span class="fc" id="L66">				winner = Character.toString(player);</span>
-<span class="fc" id="L67">				ongoingGame = false;</span>
+	private String checkForVerticalWin(){
+<span class="fc bfc" id="L49" title="All 2 branches covered.">		for (int i = 0; i &lt; board.length; i++){</span>
+<span class="fc bfc" id="L50" title="All 6 branches covered.">			if (board[0][i] == board[1][i] &amp;&amp; board[1][i] == board[2][i] &amp;&amp; board[2][i] != ' '){</span>
+<span class="fc" id="L51">				return Character.toString(board[0][i]);</span>
 			}
 		}
-<span class="fc" id="L70">	}</span>
+<span class="fc" id="L54">		return &quot; &quot;;</span>
+	}
 	
-	public void checkForVerticalWin(){
-<span class="fc bfc" id="L73" title="All 2 branches covered.">		for (int i = 0; i &lt; board.length; i++){</span>
-<span class="pc bpc" id="L74" title="2 of 6 branches missed.">			if (board[0][i] == board[1][i] &amp;&amp; board[1][i] == board[2][i] &amp;&amp; board[2][i] != ' '){</span>
-<span class="fc" id="L75">				winner = Character.toString(player);</span>
-<span class="fc" id="L76">				ongoingGame = false;</span>
-			}
+	private String checkForDiagonalWin(){
+<span class="pc bpc" id="L58" title="1 of 6 branches missed.">		if (board[0][0] == board[1][1] &amp;&amp; board[1][1] == board[2][2] &amp;&amp; board[0][0]!= ' '){</span>
+<span class="fc" id="L59">			return Character.toString(board[0][0]);</span>
 		}
-<span class="fc" id="L79">	}</span>
+<span class="pc bpc" id="L61" title="1 of 6 branches missed.">		if (board[0][2] == board[1][1] &amp;&amp; board[1][1] == board[2][0] &amp;&amp; board[0][2] != ' '){</span>
+<span class="fc" id="L62">			return Character.toString(board[0][2]);</span>
+		}
+<span class="fc" id="L64">		return &quot; &quot;;</span>
+	}
 	
-	public  void checkForDiagonalWin(){
-<span class="pc bpc" id="L82" title="2 of 6 branches missed.">		if (board[0][0] == board[1][1] &amp;&amp; board[1][1] == board[2][2] &amp;&amp; board[0][0]!= ' '){</span>
-<span class="fc" id="L83">			winner = Character.toString(player);</span>
-<span class="fc" id="L84">			ongoingGame = false;</span>
-		}
-<span class="pc bpc" id="L86" title="2 of 6 branches missed.">		if (board[0][2] == board[1][1] &amp;&amp; board[1][1] == board[2][0] &amp;&amp; board[0][2] != ' '){</span>
-<span class="fc" id="L87">			winner = Character.toString(player);</span>
-<span class="fc" id="L88">			ongoingGame = false;</span>
-		}
-<span class="fc" id="L90">	}</span>
-	
-	public void checkForTie(){
-<span class="fc" id="L93">		int count = 0;</span>
-<span class="fc bfc" id="L94" title="All 2 branches covered.">		for (int row = 0; row &lt; board.length;row++){</span>
-<span class="pc bpc" id="L95" title="3 of 6 branches missed.">			if (board[row][0]!= ' ' &amp;&amp; board[row][1] != ' ' &amp;&amp; board[row][2] != ' '){</span>
-<span class="fc" id="L96">				count++;</span>
-<span class="fc bfc" id="L97" title="All 2 branches covered.">				if (count == 3){</span>
-<span class="fc" id="L98">				winner = &quot;TIE&quot;;</span>
-<span class="fc" id="L99">				ongoingGame = false;</span>
+	private boolean checkForTie(){
+<span class="fc" id="L68">		int count = 0;</span>
+<span class="fc bfc" id="L69" title="All 2 branches covered.">		for (int row = 0; row &lt; board.length;row++){</span>
+<span class="pc bpc" id="L70" title="1 of 6 branches missed.">			if (board[row][0]!= ' ' &amp;&amp; board[row][1] != ' ' &amp;&amp; board[row][2] != ' '){</span>
+<span class="fc" id="L71">				count++;</span>
+<span class="fc bfc" id="L72" title="All 2 branches covered.">				if(count == 3){</span>
+<span class="fc" id="L73">					return true;</span>
 				}
 			}
 		}
-<span class="fc" id="L103">	}</span>
-	
-	public String getWinner(){
-<span class="fc" id="L106">		return winner;</span>
+<span class="fc" id="L77">		return false;</span>
 	}
 	
+	public String getWinner(){
+<span class="fc" id="L81">		String hWinner = checkForHorizontalWin();</span>
+<span class="fc" id="L82">		String vWinner = checkForVerticalWin();</span>
+<span class="fc" id="L83">		String dWinner = checkForDiagonalWin();</span>
+<span class="fc bfc" id="L84" title="All 2 branches covered.">		if(!hWinner.equals(&quot; &quot;)) return hWinner;</span>
+<span class="fc bfc" id="L85" title="All 2 branches covered.">		else if(!vWinner.equals(&quot; &quot;)) return vWinner;</span>
+<span class="fc bfc" id="L86" title="All 2 branches covered.">		else if(!dWinner.equals(&quot; &quot;)) return dWinner;</span>
+<span class="fc bfc" id="L87" title="All 2 branches covered.">		else if(checkForTie()) return &quot;TIE&quot;;</span>
+<span class="fc" id="L88">		else return &quot; &quot;;</span>
+	}	
 }
-</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.1.201405082137</span></div></body></html>
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>
